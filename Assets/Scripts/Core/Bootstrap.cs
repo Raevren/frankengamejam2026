@@ -3,16 +3,17 @@ using UnityEngine;
 
 namespace Core {
     public class Bootstrap : MonoBehaviour {
-        static Bootstrap instance;
+        public static Bootstrap Instance { get; private set; }
+        [field: SerializeField] public AudioConfig AudioConfig { get; private set; }
         ServiceManager _serviceManager;
 
         void Awake() {
-            if (instance != null && instance != this) {
+            if (Instance != null && Instance != this) {
                 Destroy(gameObject);
                 return;
             }
 
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
 
             _serviceManager = new ServiceManager();
