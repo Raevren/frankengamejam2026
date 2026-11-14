@@ -9,6 +9,30 @@ using UnityEngine.Serialization;
 using UnityEditor;
 #endif
 
+namespace FMOD
+{
+    public partial class VERSION
+    {
+#if DEVELOPMENT_BUILD
+        public const string dllSuffix = "L";
+#else
+        public const string dllSuffix = "";
+#endif
+    }
+}
+
+namespace FMOD.Studio
+{
+    public partial class STUDIO_VERSION
+    {
+#if DEVELOPMENT_BUILD
+        public const string dllSuffix = "L";
+#else
+        public const string dllSuffix = "";
+#endif
+    }
+}
+
 namespace FMODUnity
 {
     public class PlatformCallbackHandler : ScriptableObject
@@ -515,15 +539,14 @@ namespace FMODUnity
 
                 FMOD.RESULT result = coreSystem.loadPlugin(pluginPath, out handle);
 
+#if UNITY_64 || UNITY_EDITOR_64
+                // Add a "64" suffix and try again
                 if (result == FMOD.RESULT.ERR_FILE_BAD || result == FMOD.RESULT.ERR_FILE_NOTFOUND)
                 {
-                    if (Environment.Is64BitProcess)
-                    {
-                        // Add a "64" suffix and try again
-                        string pluginPath64 = GetPluginPath(string.Format("{0}64", pluginName));
-                        result = coreSystem.loadPlugin(pluginPath64, out handle);
-                    }
+                    string pluginPath64 = GetPluginPath(pluginName + "64");
+                    result = coreSystem.loadPlugin(pluginPath64, out handle);
                 }
+#endif
 
                 reportResult(result, string.Format("Loading plugin '{0}' from '{1}'", pluginName, pluginPath));
             }
@@ -546,9 +569,9 @@ namespace FMODUnity
 
                 if (type == null)
                 {
-                    RuntimeUtils.DebugLogWarning(string.Format(
+                    RuntimeUtils.DebugLogWarningFormat(
                         "FMOD: {0} static plugins specified, but the {1} class was not found.",
-                        StaticPlugins.Count.ToString(), className));
+                        StaticPlugins.Count, className);
                     return;
                 }
 
@@ -557,17 +580,17 @@ namespace FMODUnity
 
                 if (method == null)
                 {
-                    RuntimeUtils.DebugLogWarning(string.Format(
+                    RuntimeUtils.DebugLogWarningFormat(
                         "FMOD: {0} static plugins specified, but the {1}.{2} method was not found.",
-                        StaticPlugins.Count.ToString(), className, RegisterStaticPluginsFunctionName));
+                        StaticPlugins.Count, className, RegisterStaticPluginsFunctionName);
                     return;
                 }
 
                 method.Invoke(null, new object[] { coreSystem, reportResult });
 #else
-                RuntimeUtils.DebugLogWarning(string.Format(
+                RuntimeUtils.DebugLogWarningFormat(
                     "FMOD: {0} static plugins specified, but static plugins are only supported on the IL2CPP scripting backend",
-                    StaticPlugins.Count.ToString()));
+                    StaticPlugins.Count);
 #endif
             }
         }
@@ -667,7 +690,6 @@ namespace FMODUnity
         }
 
         // A property value that can be inherited from the parent or overridden.
-        [Serializable]
         public class Property<T>
         {
             public T Value;
@@ -974,11 +996,6 @@ namespace FMODUnity
                     return DefaultThreadAffinities;
                 }
             }
-        }
-
-        internal virtual FMOD.THREAD_STACK_SIZE GetStackSize()
-        {
-            return FMOD.THREAD_STACK_SIZE.DEFAULT;
         }
 
         internal PropertyThreadAffinityList ThreadAffinitiesProperty { get { return threadAffinities; } }

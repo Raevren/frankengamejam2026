@@ -429,7 +429,7 @@ dotnet_naming_rule.constants_should_be_capslock.severity = warning
 dotnet_naming_rule.constants_should_be_capslock.symbols = constants
 dotnet_naming_rule.constants_should_be_capslock.style = capslock
 
-dotnet_naming_rule.non_method_member_should_be_camelcase.severity = warning
+dotnet_naming_rule.non_method_member_should_be_camelcase.severity = none
 dotnet_naming_rule.non_method_member_should_be_camelcase.symbols = non_method_member
 dotnet_naming_rule.non_method_member_should_be_camelcase.style = camelcase
 
