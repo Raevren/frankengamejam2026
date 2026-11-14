@@ -1,7 +1,6 @@
 using Core;
 using UnityEngine;
 
-[CreateAssetMenu]
 sealed class PlayerService : IService {
     [SerializeField]
     internal bool isQuacking;
