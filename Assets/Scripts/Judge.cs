@@ -12,11 +12,11 @@ sealed class Judge : MonoBehaviour {
 
     [SerializeField] internal bool isCorrect;
 
-    [SerializeField] ParamRef isCorrectParameter;
+    [SerializeField, ParamRef] string isCorrectParameter = string.Empty;
 
     void Update() {
         isCorrect = player.isQuacking == song.shouldBeQuacking;
 
-        RuntimeManager.StudioSystem.setParameterByName(isCorrectParameter.Name, isCorrect ? 1 : 0);
+        RuntimeManager.StudioSystem.setParameterByName(isCorrectParameter, isCorrect ? 1 : 0);
     }
 }
