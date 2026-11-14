@@ -63,3 +63,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Judge
   isCorrect: 0
+  isCorrectParameter: IsTimedCorrectly
