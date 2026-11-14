@@ -1,0 +1,8 @@
+using System;
+using UnityEngine;
+using UnityEngine.Playables;
+
+[Serializable]
+sealed class TapPlayableAsset : PlayableAsset {
+    public override Playable CreatePlayable(PlayableGraph graph, GameObject owner) => Playable.Create(graph);
+}
