@@ -19,7 +19,7 @@ namespace Audio {
         public void Play(EventReference reference, bool stopOtherImmediately = false, bool leadMuted = false) {
             Stop(stopOtherImmediately);
             _eventInstance = RuntimeManager.CreateInstance(reference);
-            ToggleMute(leadMuted);
+            ToggleLeadMute(leadMuted);
             _eventInstance.Value.start();
         }
 
@@ -39,9 +39,9 @@ namespace Audio {
         /// <summary>
         /// Mutes/Unmutes the lead melody
         /// </summary>
-        public void ToggleMute(bool mute) {
+        public void ToggleLeadMute(bool mute) {
             if (_eventInstance == null) {
-                Debug.LogWarning("[MusicService] Cannot mute, no track is playing");
+                Debug.LogWarning("[MusicService] Cannot mute lead tracks, no track is playing");
                 return;
             }
             _eventInstance.Value.setParameterByName(PARAM_LEAD_VOLUME, mute ? 0 : 1);
