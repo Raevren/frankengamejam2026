@@ -5,10 +5,12 @@ using UnityEngine;
 namespace Audio {
     public class BgmTrigger : MonoBehaviour {
         
-        [SerializeField] private EventReference eventReference;
+        [SerializeField] EventReference eventReference;
+        [SerializeField] bool leadMuted;
         
         void Start() {
-            ServiceManager.Instance.GetService<BgmPlayer>().Play(eventReference);
+            MusicService service = ServiceManager.Instance.GetService<MusicService>();
+            service.Play(eventReference, leadMuted: leadMuted);
         }
     }
 }
