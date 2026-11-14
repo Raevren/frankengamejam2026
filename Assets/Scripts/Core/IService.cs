@@ -1,5 +1,4 @@
-namespace Core
-{
+namespace Core {
     public interface IService {
         public void OnRegister();
         public void OnUnregister();

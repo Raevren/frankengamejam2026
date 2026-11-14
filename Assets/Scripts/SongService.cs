@@ -2,21 +2,19 @@ using Core;
 using UnityEngine;
 
 sealed class SongService : IService {
-    internal bool shouldBeQuacking => shouldBeQuackingCount > 0;
+    internal bool shouldBeQuacking {
+        get => shouldBeQuackingCount > 0;
+    }
 
     [SerializeField] internal int shouldBeQuackingCount;
 
-    internal void StartQuack() {
-        shouldBeQuackingCount++;
-    }
+    internal void StartQuack() => shouldBeQuackingCount++;
 
-    internal void StopQuack() {
-        shouldBeQuackingCount--;
-    }
+    internal void StopQuack() => shouldBeQuackingCount--;
 
-    public void OnRegister() {}
+    public void OnRegister() { }
 
-    public void OnUnregister() {}
+    public void OnUnregister() { }
 
-    public void OnAllRegistered() {}
+    public void OnAllRegistered() { }
 }

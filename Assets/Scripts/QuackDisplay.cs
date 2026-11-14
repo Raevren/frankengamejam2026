@@ -1,9 +1,11 @@
-using System;
 using Core;
 using UnityEngine;
 
 public class QuackDisplay : MonoBehaviour {
-    static PlayerService player => ServiceManager.Instance.GetService<PlayerService>();
+    static PlayerService player {
+        get => ServiceManager.Instance.GetService<PlayerService>();
+    }
+
     [SerializeField] GameObject quackPrefab;
 
     GameObject quackInstance;

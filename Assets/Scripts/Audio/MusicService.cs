@@ -6,7 +6,6 @@ using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 namespace Audio {
     public class MusicService : IService {
-        
         EventInstance? _eventInstance;
         const string PARAM_LEAD_VOLUME = "LeadVolume";
 
@@ -31,6 +30,7 @@ namespace Audio {
             if (_eventInstance == null) {
                 return;
             }
+
             _eventInstance.Value.stop(immediate ? STOP_MODE.ALLOWFADEOUT : STOP_MODE.IMMEDIATE);
             _eventInstance.Value.release();
             _eventInstance = null;
@@ -44,15 +44,18 @@ namespace Audio {
                 Debug.LogWarning("[MusicService] Cannot mute lead tracks, no track is playing");
                 return;
             }
+
             RuntimeManager.StudioSystem.setParameterByName(PARAM_LEAD_VOLUME, mute ? 0 : 1);
         }
-        
+
         #region IService Implementation
+
         public void OnRegister() { }
 
         public void OnUnregister() { }
 
         public void OnAllRegistered() { }
+
         #endregion
     }
 }

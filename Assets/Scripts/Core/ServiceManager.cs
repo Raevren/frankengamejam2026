@@ -7,17 +7,16 @@ namespace Core {
         public static ServiceManager Instance { get; private set; }
         public static bool AllRegistered { get; private set; }
 
-        readonly Dictionary<Type, IService> _services = new Dictionary<Type, IService>();
+        readonly Dictionary<Type, IService> _services = new();
 
-        internal ServiceManager() {
-            Instance ??= this;
-        }
-        
+        internal ServiceManager() => Instance ??= this;
+
         public void RegisterService<T>() where T : IService {
             if (_services.ContainsKey(typeof(T))) {
                 Debug.LogWarning($"[ServiceManager] {typeof(T).Name} is already registered");
                 return;
             }
+
             IService service = Activator.CreateInstance<T>();
             _services.Add(typeof(T), service);
             service.OnRegister();
@@ -28,15 +27,17 @@ namespace Core {
                 Debug.LogWarning($"[ServiceManager] {service.GetType().Name} is not registered");
                 return;
             }
-            IService serviceInstance = _services[service.GetType()];
+
+            var serviceInstance = _services[service.GetType()];
             serviceInstance.OnUnregister();
             _services.Remove(service.GetType());
         }
-        
+
         public T GetService<T>() where T : IService {
-            if (_services.TryGetValue(typeof(T), out IService service)) {
+            if (_services.TryGetValue(typeof(T), out var service)) {
                 return (T)service;
             }
+
             throw new NullReferenceException($"[ServiceManager] {typeof(T).Name} is not registered");
         }
 
@@ -44,6 +45,7 @@ namespace Core {
             foreach (var service in _services) {
                 service.Value.OnAllRegistered();
             }
+
             AllRegistered = true;
         }
     }

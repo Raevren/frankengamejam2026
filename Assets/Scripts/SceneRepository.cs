@@ -3,7 +3,5 @@ using UnityEngine.SceneManagement;
 
 [CreateAssetMenu]
 sealed class SceneRepository : ScriptableObject {
-    public void LoadSceneByName(string sceneName) {
-        SceneManager.LoadSceneAsync(sceneName);
-    }
+    public void LoadSceneByName(string sceneName) => SceneManager.LoadSceneAsync(sceneName);
 }

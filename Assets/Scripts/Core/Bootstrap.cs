@@ -11,9 +11,10 @@ namespace Core {
                 Destroy(gameObject);
                 return;
             }
+
             instance = this;
             DontDestroyOnLoad(gameObject);
-            
+
             _serviceManager = new ServiceManager();
             RegisterServices();
         }

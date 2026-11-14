@@ -1,4 +1,3 @@
-using System;
 using Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,7 +5,10 @@ using UnityEngine.InputSystem;
 sealed class PlayerInputHandler : MonoBehaviour {
     InputSystem_Actions actions;
 
-    static PlayerService player => ServiceManager.Instance.GetService<PlayerService>();
+    static PlayerService player {
+        get => ServiceManager.Instance.GetService<PlayerService>();
+    }
+
     [SerializeField] Camera mainCamera;
 
     void Awake() {
@@ -16,9 +18,7 @@ sealed class PlayerInputHandler : MonoBehaviour {
         actions.Player.Attack.canceled += _ => player.StopQuack();
     }
 
-    void OnEnable() {
-        actions.Enable();
-    }
+    void OnEnable() => actions.Enable();
 
     void Update() {
         if (actions.Player.Attack.inProgress) {
@@ -26,11 +26,7 @@ sealed class PlayerInputHandler : MonoBehaviour {
         }
     }
 
-    void OnDisable() {
-        actions.Disable();
-    }
+    void OnDisable() => actions.Disable();
 
-    void OnDestroy() {
-        actions.Dispose();
-    }
+    void OnDestroy() => actions.Dispose();
 }

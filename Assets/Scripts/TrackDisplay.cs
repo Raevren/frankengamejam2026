@@ -2,10 +2,7 @@ using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Playables;
-using UnityEngine.PlayerLoop;
-using UnityEngine.Rendering;
 using UnityEngine.Timeline;
-using UObject = UnityEngine.Object;
 
 sealed class TrackDisplay : MonoBehaviour {
     readonly struct TrackRowDisplay {
@@ -17,8 +14,8 @@ sealed class TrackDisplay : MonoBehaviour {
             foreach (var clip in asset.GetClips()) {
                 var clipTransform = Instantiate(prefab, transform);
                 double start = clip.start;
-                clipTransform.anchoredPosition = new((float)start, 0);
-                clipTransform.sizeDelta = new((float)clip.duration, 1);
+                clipTransform.anchoredPosition = new Vector2((float)start, 0);
+                clipTransform.sizeDelta = new Vector2((float)clip.duration, 1);
             }
         }
     }
@@ -43,7 +40,7 @@ sealed class TrackDisplay : MonoBehaviour {
 
     void Update() {
         if (transform is RectTransform rectTransform) {
-            rectTransform.anchoredPosition = new((float)-director.time, 0);
+            rectTransform.anchoredPosition = new Vector2((float)-director.time, 0);
         }
     }
 

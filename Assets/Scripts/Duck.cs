@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace System.Runtime.CompilerServices {
     public class Duck : MonoBehaviour {
-        
         Animator animator;
 
         void Start() {
@@ -13,7 +12,7 @@ namespace System.Runtime.CompilerServices {
 
         IEnumerator SetRandomSpeed() {
             var random = new Random();
-            animator.speed =  random.Next(0, 2);
+            animator.speed = random.Next(0, 2);
             yield return new WaitForSecondsRealtime(random.Next(2, 10));
         }
     }

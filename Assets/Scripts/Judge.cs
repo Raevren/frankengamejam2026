@@ -1,19 +1,19 @@
-using System;
 using Core;
 using FMODUnity;
-using UnityEditor.Search;
 using UnityEngine;
-using UnityEngine.Playables;
-using UnityEngine.PlayerLoop;
 
 sealed class Judge : MonoBehaviour {
-    static SongService song => ServiceManager.Instance.GetService<SongService>();
+    static SongService song {
+        get => ServiceManager.Instance.GetService<SongService>();
+    }
 
-    static PlayerService player => ServiceManager.Instance.GetService<PlayerService>();
+    static PlayerService player {
+        get => ServiceManager.Instance.GetService<PlayerService>();
+    }
 
     [SerializeField] internal bool isCorrect;
 
-    [SerializeField, ParamRef] string isCorrectParameter = string.Empty;
+    [SerializeField] [ParamRef] string isCorrectParameter = string.Empty;
 
     void Update() {
         isCorrect = player.isQuacking == song.shouldBeQuacking;
