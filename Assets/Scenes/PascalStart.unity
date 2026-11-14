@@ -679,6 +679,63 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &879705592
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 71832421390988889, guid: fedae6fe72ef6420dab221a2fc5fa178, type: 3}
+      propertyPath: m_Name
+      value: __Bootstrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 561938614644245848, guid: fedae6fe72ef6420dab221a2fc5fa178, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 561938614644245848, guid: fedae6fe72ef6420dab221a2fc5fa178, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 561938614644245848, guid: fedae6fe72ef6420dab221a2fc5fa178, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 561938614644245848, guid: fedae6fe72ef6420dab221a2fc5fa178, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 561938614644245848, guid: fedae6fe72ef6420dab221a2fc5fa178, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 561938614644245848, guid: fedae6fe72ef6420dab221a2fc5fa178, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 561938614644245848, guid: fedae6fe72ef6420dab221a2fc5fa178, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 561938614644245848, guid: fedae6fe72ef6420dab221a2fc5fa178, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 561938614644245848, guid: fedae6fe72ef6420dab221a2fc5fa178, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 561938614644245848, guid: fedae6fe72ef6420dab221a2fc5fa178, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fedae6fe72ef6420dab221a2fc5fa178, type: 3}
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,8 +746,8 @@ GameObject:
   m_Component:
   - component: {fileID: 961739753}
   - component: {fileID: 961739752}
-  - component: {fileID: 961739751}
   - component: {fileID: 961739750}
+  - component: {fileID: 961739754}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -742,14 +799,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!81 &961739751
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961739749}
-  m_Enabled: 1
 --- !u!20 &961739752
 Camera:
   m_ObjectHideFlags: 0
@@ -816,6 +865,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &961739754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961739749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 961739749}
 --- !u!4 &1037808461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2358758027731666802, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
@@ -1450,6 +1513,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a5577079f8704d52af08b3305dbd022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartGameScript
+  beginningMusic:
+    Guid:
+      Data1: -17518469
+      Data2: 1182498063
+      Data3: 2032572047
+      Data4: 444900453
+    Path: event:/MUS_Practice
   _curtain: {fileID: 1631477372}
   _mainMenue: {fileID: 1569660904}
 --- !u!1001 &1785613684
@@ -1871,7 +1941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2120129433
 SpriteRenderer:
   serializedVersion: 2
@@ -2072,6 +2142,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 879705592}
   - {fileID: 854657751}
   - {fileID: 961739753}
   - {fileID: 1569660908}

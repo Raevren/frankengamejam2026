@@ -1,6 +1,11 @@
+using Audio;
+using Core;
+using FMODUnity;
 using UnityEngine;
 
 public class StartGameScript : MonoBehaviour {
+
+    [SerializeField] EventReference beginningMusic;
     
     static readonly int open = Animator.StringToHash("open");
 
@@ -16,6 +21,6 @@ public class StartGameScript : MonoBehaviour {
     }
 
     public void StartGameReally() {
-        
+        ServiceManager.Instance.GetService<MusicService>().Play(beginningMusic);
     }
 }
