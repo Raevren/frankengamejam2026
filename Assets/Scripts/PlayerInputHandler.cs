@@ -1,11 +1,12 @@
 using System;
+using Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 sealed class PlayerInputHandler : MonoBehaviour {
     InputSystem_Actions actions;
 
-    [SerializeField] PlayerAsset player;
+    static PlayerService player => ServiceManager.Instance.GetService<PlayerService>();
     [SerializeField] Camera mainCamera;
 
     void Awake() {

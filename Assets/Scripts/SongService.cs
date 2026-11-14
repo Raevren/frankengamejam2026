@@ -1,6 +1,7 @@
+using Core;
 using UnityEngine;
 
-sealed class SongBehaviour : MonoBehaviour {
+sealed class SongService : IService {
     internal bool shouldBeQuacking => shouldBeQuackingCount > 0;
 
     [SerializeField] internal int shouldBeQuackingCount;
@@ -12,4 +13,10 @@ sealed class SongBehaviour : MonoBehaviour {
     internal void StopQuack() {
         shouldBeQuackingCount--;
     }
+
+    public void OnRegister() {}
+
+    public void OnUnregister() {}
+
+    public void OnAllRegistered() {}
 }

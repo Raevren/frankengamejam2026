@@ -1,8 +1,9 @@
+using Core;
 using UnityEngine;
 using UnityEngine.Playables;
 
 sealed class TapPlayableBehavior : PlayableBehaviour {
-    internal SongBehaviour song;
+    SongService song => ServiceManager.Instance.GetService<SongService>();
 
     bool isQuacking;
 
