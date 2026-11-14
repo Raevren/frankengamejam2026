@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec67fda9a1a4b2e9af9db30dd0996c0, type: 3}
+  m_Name: New Note Repository
+  m_EditorClassIdentifier: Assembly-CSharp::NoteRepository
+  fullNotes:
+  - {fileID: 389001682, guid: f7ac891436877bb4f966612d045c8a01, type: 3}
+  halfNotes:
+  - {fileID: 2111554742, guid: f7ac891436877bb4f966612d045c8a01, type: 3}
+  quarterNotes:
+  - {fileID: 1438345286, guid: f7ac891436877bb4f966612d045c8a01, type: 3}
+  eighthNotes:
+  - {fileID: 456808308, guid: f7ac891436877bb4f966612d045c8a01, type: 3}
+  sixteenthNotes:
+  - {fileID: -292179284, guid: f7ac891436877bb4f966612d045c8a01, type: 3}

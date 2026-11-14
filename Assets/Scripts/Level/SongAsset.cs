@@ -7,7 +7,8 @@ namespace Level {
         [Header("Sub-Assets")] [SerializeField]
         public TimelineAsset timeline;
 
-        [Header("MIDI file")] [SerializeField] public int ticksPerQuarterNote;
+        [Header("MIDI file")] [SerializeField] public int ticksPerNote;
+        [SerializeField] public int beatsPerMinute;
         [SerializeField] public Note[] notes = Array.Empty<Note>();
     }
 }
