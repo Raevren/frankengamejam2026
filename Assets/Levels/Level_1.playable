@@ -12,6 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c6b28344eb48a2b5fd7dfc2219e698, type: 3}
   m_Name: TapPlayableAsset(Clone)
   m_EditorClassIdentifier: Assembly-CSharp::TapPlayableAsset
+--- !u!114 &-4777822801161728822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c6b28344eb48a2b5fd7dfc2219e698, type: 3}
+  m_Name: TapPlayableAsset(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TapPlayableAsset
+--- !u!114 &-3714348823431494831
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c6b28344eb48a2b5fd7dfc2219e698, type: 3}
+  m_Name: TapPlayableAsset(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TapPlayableAsset
+--- !u!114 &-2580233137096497795
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c6b28344eb48a2b5fd7dfc2219e698, type: 3}
+  m_Name: TapPlayableAsset(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TapPlayableAsset
 --- !u!114 &-1594198150965780441
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -23,6 +59,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0c6b28344eb48a2b5fd7dfc2219e698, type: 3}
   m_Name: TapPlayableAsset
+  m_EditorClassIdentifier: Assembly-CSharp::TapPlayableAsset
+--- !u!114 &-1028170102395919879
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c6b28344eb48a2b5fd7dfc2219e698, type: 3}
+  m_Name: TapPlayableAsset(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TapPlayableAsset
+--- !u!114 &-875944387632342411
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c6b28344eb48a2b5fd7dfc2219e698, type: 3}
+  m_Name: TapPlayableAsset(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: Assembly-CSharp::TapPlayableAsset
 --- !u!114 &11400000
 MonoBehaviour:
@@ -40,12 +100,192 @@ MonoBehaviour:
   m_Tracks:
   - {fileID: 4072201268258610984}
   - {fileID: 4686403077262702210}
+  - {fileID: 2858989043022537468}
   m_FixedDuration: 0
   m_EditorSettings:
     m_Framerate: 30
     m_ScenePreview: 1
   m_DurationMode: 0
   m_MarkerTrack: {fileID: 0}
+--- !u!114 &2595704587693019185
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c6b28344eb48a2b5fd7dfc2219e698, type: 3}
+  m_Name: TapPlayableAsset(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TapPlayableAsset
+--- !u!114 &2845593295865369444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c6b28344eb48a2b5fd7dfc2219e698, type: 3}
+  m_Name: TapPlayableAsset(Clone)(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TapPlayableAsset
+--- !u!114 &2858989043022537468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8924d205b034c629c249a45c0a82234, type: 3}
+  m_Name: Tap Track (2)
+  m_EditorClassIdentifier: Assembly-CSharp::TapTrack
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 11400000}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 1.0333333333333334
+    m_ClipIn: 0
+    m_Asset: {fileID: 2595704587693019185}
+    m_Duration: 0.4666666666666668
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2858989043022537468}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TapPlayableAsset
+  - m_Version: 1
+    m_Start: 1.983333333333333
+    m_ClipIn: 0
+    m_Asset: {fileID: 4639263159404251953}
+    m_Duration: 3.5166666666666666
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2858989043022537468}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TapPlayableAsset
+  - m_Version: 1
+    m_Start: 8.3
+    m_ClipIn: 0
+    m_Asset: {fileID: -4777822801161728822}
+    m_Duration: 0.4666666666666668
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2858989043022537468}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TapPlayableAsset
+  - m_Version: 1
+    m_Start: 9.250000000000004
+    m_ClipIn: 0
+    m_Asset: {fileID: 2845593295865369444}
+    m_Duration: 3.5166666666666666
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 2858989043022537468}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TapPlayableAsset
+  m_Markers:
+    m_Objects: []
 --- !u!114 &4072201268258610984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,49 +320,13 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -137,10 +341,76 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: TapPlayableAsset
   - m_Version: 1
-    m_Start: 5.5
+    m_Start: 6.3
     m_ClipIn: 0
     m_Asset: {fileID: 5683942893790317412}
-    m_Duration: 0.4666666666666668
+    m_Duration: 1.75
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 4072201268258610984}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TapPlayableAsset
+  - m_Version: 1
+    m_Start: 8.75
+    m_ClipIn: 0
+    m_Asset: {fileID: 7421453665681493242}
+    m_Duration: 3.5166666666666666
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 4072201268258610984}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TapPlayableAsset
+  - m_Version: 1
+    m_Start: 12.766666666666662
+    m_ClipIn: 0
+    m_Asset: {fileID: -3714348823431494831}
+    m_Duration: 1.75
     m_TimeScale: 1
     m_ParentTrack: {fileID: 4072201268258610984}
     m_EaseInDuration: 0
@@ -173,25 +443,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     m_MixOutCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -207,6 +459,18 @@ MonoBehaviour:
     m_DisplayName: TapPlayableAsset
   m_Markers:
     m_Objects: []
+--- !u!114 &4639263159404251953
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c6b28344eb48a2b5fd7dfc2219e698, type: 3}
+  m_Name: TapPlayableAsset(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TapPlayableAsset
 --- !u!114 &4686403077262702210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -241,25 +505,7 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -284,6 +530,105 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TapPlayableAsset
+  - m_Version: 1
+    m_Start: 3.7333333333333334
+    m_ClipIn: 0
+    m_Asset: {fileID: -2580233137096497795}
+    m_Duration: 3.5166666666666666
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 4686403077262702210}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TapPlayableAsset
+  - m_Version: 1
+    m_Start: 7.833333333333333
+    m_ClipIn: 0
+    m_Asset: {fileID: -1028170102395919879}
+    m_Duration: 0.4666666666666668
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 4686403077262702210}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: TapPlayableAsset
+  - m_Version: 1
+    m_Start: 11
+    m_ClipIn: 0
+    m_Asset: {fileID: -875944387632342411}
+    m_Duration: 3.5166666666666666
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: 4686403077262702210}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: -1
+    m_BlendOutDuration: -1
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -326,4 +671,16 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0c6b28344eb48a2b5fd7dfc2219e698, type: 3}
   m_Name: TapPlayableAsset(Clone)(Clone)(Clone)
+  m_EditorClassIdentifier: Assembly-CSharp::TapPlayableAsset
+--- !u!114 &7421453665681493242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0c6b28344eb48a2b5fd7dfc2219e698, type: 3}
+  m_Name: TapPlayableAsset(Clone)(Clone)
   m_EditorClassIdentifier: Assembly-CSharp::TapPlayableAsset
