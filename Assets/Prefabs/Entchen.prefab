@@ -69,7 +69,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975c9049e7bf4807948757df32c9e6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::System.Runtime.CompilerServices.Duck
-  animator: {fileID: 0}
 --- !u!1 &4950148401414009985
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +242,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: bcf9b49c509e74b21aa3f5bf590bb243, type: 3}
-  m_Color: {r: 1, g: 0.73227733, b: 0.23113209, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
