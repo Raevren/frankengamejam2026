@@ -1,7 +1,8 @@
+using Core;
 using UnityEngine;
 
 [CreateAssetMenu]
-sealed class PlayerAsset : ScriptableObject {
+sealed class PlayerService : IService {
     [SerializeField]
     internal bool isQuacking;
 
@@ -17,4 +18,10 @@ sealed class PlayerAsset : ScriptableObject {
     {
         isQuacking = false;
     }
+
+    public void OnRegister() {}
+
+    public void OnUnregister() {}
+
+    public void OnAllRegistered() {}
 }

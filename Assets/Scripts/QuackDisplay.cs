@@ -1,8 +1,9 @@
 using System;
+using Core;
 using UnityEngine;
 
 public class QuackDisplay : MonoBehaviour {
-    [SerializeField] PlayerAsset player;
+    static PlayerService player => ServiceManager.Instance.GetService<PlayerService>();
     [SerializeField] GameObject quackPrefab;
 
     GameObject quackInstance;
