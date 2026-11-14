@@ -44,7 +44,7 @@ namespace Audio {
                 Debug.LogWarning("[MusicService] Cannot mute lead tracks, no track is playing");
                 return;
             }
-            _eventInstance.Value.setParameterByName(PARAM_LEAD_VOLUME, mute ? 0 : 1);
+            RuntimeManager.StudioSystem.setParameterByName(PARAM_LEAD_VOLUME, mute ? 0 : 1);
         }
         
         #region IService Implementation
