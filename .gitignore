@@ -37,6 +37,7 @@
 # Visual Studio and Rider cache directory
 .vs/
 .idea/
+FMOD Project/Dirigente/.cache/
 
 # Gradle cache directory
 .gradle/
