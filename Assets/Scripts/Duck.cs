@@ -13,8 +13,9 @@ namespace System.Runtime.CompilerServices {
 
         IEnumerator SetRandomSpeed() {
             var random = new Random();
-            animator.speed =  random.Next(0, 2);
-            yield return new WaitForSecondsRealtime(random.Next(2, 10));
+            animator.speed =  Math.Min(1, Math.Max(0, random.Next(0, 10)-7));
+            yield return new WaitForSecondsRealtime(1);
+            yield return SetRandomSpeed();
         }
     }
 }

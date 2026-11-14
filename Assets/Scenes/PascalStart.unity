@@ -441,6 +441,10 @@ PrefabInstance:
       propertyPath: m_Color.g
       value: 0.96806026
       objectReference: {fileID: 0}
+    - target: {fileID: 819285247194554121, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1398542347266160159, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
       propertyPath: m_Name
       value: Dirigente
@@ -499,6 +503,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2581678915714815052, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
       propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726438361091353163, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2056,7 +2064,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120129432}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
