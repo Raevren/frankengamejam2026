@@ -399,6 +399,7 @@ csharp_space_between_method_declaration_name_and_open_parenthesis = false
 csharp_space_between_method_declaration_parameter_list_parentheses = false
 csharp_space_between_parentheses = false
 csharp_space_between_square_brackets = false
+csharp_place_type_attribute_on_same_line = never
 
 # Line wrapping preferences
 csharp_preserve_single_line_blocks = true
