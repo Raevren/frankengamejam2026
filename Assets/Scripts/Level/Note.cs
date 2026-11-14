@@ -1,12 +1,20 @@
-namespace Level {
-    public class Note {
-        public int note;
-        public int from;
-        public  int duration;
+using System;
+using UnityEngine;
+using UnityEngine.Serialization;
 
-        public Note(int note, int from, int duration) {
+namespace Level {
+    [Serializable]
+    public class Note {
+        [SerializeField]
+        public int note;
+        [SerializeField]
+        public int start;
+        [SerializeField]
+        public int duration;
+
+        public Note(int note, int start, int duration) {
             this.note = note;
-            this.from = from;
+            this.start = start;
             this.duration = duration;
         }
     }

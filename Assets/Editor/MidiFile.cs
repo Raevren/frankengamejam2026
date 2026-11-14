@@ -1,7 +1,7 @@
 using UnityEngine;
 
 // cloned from this wonderful person: https://github.com/davidluzgouveia/midi-parser
-namespace MIDI
+namespace Editor
 {
     using System;
     using System.Collections.Generic;

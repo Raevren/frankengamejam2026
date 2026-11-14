@@ -1,11 +1,10 @@
 using System.ComponentModel;
 using System.Reflection;
-
-[assembly: AssemblyVersion("1.0.0")]
+using System.Runtime.CompilerServices;
 
 // ReSharper disable once CheckNamespace
-namespace System.Runtime.CompilerServices
-{
+namespace System.Runtime.CompilerServices {
     [EditorBrowsable(EditorBrowsableState.Never)]
-    internal class IsExternalInit { }
+    internal class IsExternalInit {
+    }
 }
