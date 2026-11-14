@@ -12,10 +12,16 @@ sealed class TrackDisplay : MonoBehaviour {
             this.transform = transform;
 
             foreach (var clip in asset.GetClips()) {
-                var clipTransform = Instantiate(prefab, transform);
-                double start = clip.start;
-                clipTransform.anchoredPosition = new Vector2((float)start, 0);
-                clipTransform.sizeDelta = new Vector2((float)clip.duration, 1);
+                if (clip.asset is TapPlayableAsset tap) {
+                    var clipTransform = Instantiate(prefab, transform);
+                    double start = clip.start;
+                    clipTransform.anchoredPosition = new Vector2((float)start, 0);
+                    if (clipTransform.TryGetComponent<NoteSprite>(out var sprite)) {
+                        sprite.noteDuration = tap.noteDuration;
+                    } else {
+                        clipTransform.sizeDelta = new Vector2((float)clip.duration, 1);
+                    }
+                }
             }
         }
     }
