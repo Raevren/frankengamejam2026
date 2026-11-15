@@ -7,7 +7,6 @@ using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
 
 public class Duck : MonoBehaviour, IPointerClickHandler {
-        
     Animator animator;
 
     [SerializeField] UnityEvent onClick;
@@ -15,13 +14,16 @@ public class Duck : MonoBehaviour, IPointerClickHandler {
     [SerializeField] SpriteRenderer duckTopActiveRenderer;
     [SerializeField] SpriteRenderer duckTopIdleRenderer;
     [SerializeField] SpriteRenderer duckBottomRenderer;
-    
+
     [SerializeField] SpriteRenderer duckSleepRenderer;
 
     [SerializeField] String ducksName = "Donald";
-    [SerializeField] TextMeshProUGUI speechBubble;
+    [SerializeField] TextMeshProUGUI speechBubbleText;
+    [SerializeField] GameObject speechBubble;
 
-    
+    String oldSpeechBubbleText = "";
+
+
     void Start() {
         animator = GetComponent<Animator>();
         StartCoroutine(SetRandomSpeed());
@@ -34,40 +36,40 @@ public class Duck : MonoBehaviour, IPointerClickHandler {
         var wait = new WaitForSecondsRealtime(1);
         while (true) {
             animator.speed = Mathf.Clamp(Random.Range(0, 10) - 7, 0, 1);
-            yield return wait;    
+            yield return wait;
         }
     }
 
     #region The Looks!
-    
+
     void Flip() {
         duckTopIdleRenderer.flipX = !duckTopIdleRenderer.flipX;
         duckTopActiveRenderer.flipX = !duckTopActiveRenderer.flipX;
         duckBottomRenderer.flipX = !duckBottomRenderer.flipX;
         duckSleepRenderer.flipX = !duckSleepRenderer.flipX;
     }
-    
+
     void Sleep() {
         duckTopIdleRenderer.enabled = false;
         duckTopActiveRenderer.enabled = false;
         duckBottomRenderer.enabled = false;
         duckSleepRenderer.enabled = true;
     }
-    
+
     void Idle() {
         duckTopIdleRenderer.enabled = true;
         duckTopActiveRenderer.enabled = false;
         duckBottomRenderer.enabled = true;
         duckSleepRenderer.enabled = false;
     }
-    
+
     void Active() {
         duckTopIdleRenderer.enabled = false;
         duckTopActiveRenderer.enabled = true;
         duckBottomRenderer.enabled = true;
         duckSleepRenderer.enabled = false;
     }
-    
+
     #endregion
 
 
@@ -76,6 +78,15 @@ public class Duck : MonoBehaviour, IPointerClickHandler {
     }
 
     public void SayName() {
-        speechBubble.text = ducksName;
+        oldSpeechBubbleText = speechBubbleText.text;
+        speechBubbleText.text = ducksName;
+        speechBubble.active = true;
+    }
+
+    public void SayMenu() {
+        speechBubbleText.text = oldSpeechBubbleText;
+        if (oldSpeechBubbleText == "") {
+            speechBubble.active = false;
+        }
     }
 }

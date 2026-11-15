@@ -171,7 +171,8 @@ MonoBehaviour:
   duckBottomRenderer: {fileID: 2581678915714815052}
   duckSleepRenderer: {fileID: 829835812854376902}
   ducksName: Dirigente
-  speechBubble: {fileID: 4335164349927917744}
+  speechBubbleText: {fileID: 4335164349927917744}
+  speechBubble: {fileID: 8925608643604737241}
 --- !u!1 &4950148401414009985
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,5 +529,10 @@ MonoBehaviour:
 --- !u!4 &7443428075354479475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3731891924786191661, guid: e0859282d043db84fad5dfecb878fe1b, type: 3}
+  m_PrefabInstance: {fileID: 6090566039268738654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8925608643604737241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3411521034776259207, guid: e0859282d043db84fad5dfecb878fe1b, type: 3}
   m_PrefabInstance: {fileID: 6090566039268738654}
   m_PrefabAsset: {fileID: 0}
