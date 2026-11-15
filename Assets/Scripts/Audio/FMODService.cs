@@ -14,7 +14,7 @@ namespace Audio {
         public FMODService(AudioConfig config) {
             _config = config;
         }
-        
+
         /// <summary>
         /// Starts a new track
         /// </summary>
@@ -61,7 +61,7 @@ namespace Audio {
             _quackEventInstance.Value.setParameterByName(_config.ParamLNoteHeight, noteHeight);
             _quackEventInstance.Value.start();
         }
-        
+
         public void ReleaseQuackSound() {
             if (_quackEventInstance == null) {
                 return;
@@ -89,7 +89,7 @@ namespace Audio {
             }
 
             var result = _musicEventInstance.Value.getTimelinePosition(out int timeMilliseconds);
-            time = timeMilliseconds / 1000f;
+            time = timeMilliseconds * 0.001;
             return result == RESULT.OK;
         }
     }

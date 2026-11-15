@@ -36,6 +36,8 @@ sealed class SongService : MonoBehaviour, IService {
 
     [SerializeField] internal int shouldBeQuackingCount;
 
+    [SerializeField] internal bool leadMuted = false;
+
     internal void StartQuack() => shouldBeQuackingCount++;
 
     internal void StopQuack() => shouldBeQuackingCount--;
@@ -57,7 +59,7 @@ sealed class SongService : MonoBehaviour, IService {
         director.time = 0;
         director.Evaluate();
 
-        fmod.PlayBGM(song.audioEvent, true, true);
+        fmod.PlayBGM(song.audioEvent, true, leadMuted);
 
         onPlay?.Invoke();
     }
@@ -68,7 +70,7 @@ sealed class SongService : MonoBehaviour, IService {
         }
     }
 
-    public void SetSongTimeTo(double time) {
+    void SetSongTimeTo(double time) {
         director.time = time;
         director.Evaluate();
 
