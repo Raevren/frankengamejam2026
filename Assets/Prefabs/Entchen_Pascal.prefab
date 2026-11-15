@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 819285247194554121, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
       propertyPath: ducksName
-      value: Pascal
+      value: "Pascal\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 1398542347266160159, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
       propertyPath: m_Name
-      value: Pascal Variant
+      value: Entchen_Pascal
       objectReference: {fileID: 0}
     - target: {fileID: 2358758027731666802, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
       propertyPath: m_LocalScale.x

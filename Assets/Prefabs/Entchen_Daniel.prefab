@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 819285247194554121, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
       propertyPath: ducksName
-      value: Daniel
+      value: Daniel?!
       objectReference: {fileID: 0}
     - target: {fileID: 829835812854376902, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
       propertyPath: m_Color.b
@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398542347266160159, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
       propertyPath: m_Name
-      value: Daniel Variant
+      value: Entchen_Daniel
       objectReference: {fileID: 0}
     - target: {fileID: 1619640568200480978, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
       propertyPath: m_Color.b
