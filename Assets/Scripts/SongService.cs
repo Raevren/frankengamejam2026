@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Audio;
 using Core;
 using Level;
@@ -8,6 +9,23 @@ using UnityEngine.Playables;
 sealed class SongService : MonoBehaviour, IService {
     internal bool shouldBeQuacking {
         get => shouldBeQuackingCount > 0;
+    }
+
+    [SerializeField] float quackGraceTimeMilliseconds = 0.1f;
+
+    internal bool shouldStartQuackingNow => HasNotesAround(director.time, quackGraceTimeMilliseconds);
+
+    bool HasNotesAround(double timeMilliseconds, float graceTimeMilliseconds) {
+        if (!song) {
+            return false;
+        }
+
+        int startTimeTicks = (int)((timeMilliseconds - graceTimeMilliseconds) * song.ticksPerSecond);
+        int endTimeTicks = (int)((timeMilliseconds + graceTimeMilliseconds) * song.ticksPerSecond);
+
+        return song
+            .notes
+            .Any(n => n.start > startTimeTicks && n.start < endTimeTicks);
     }
 
     [SerializeField] internal PlayableDirector director;
@@ -26,13 +44,17 @@ sealed class SongService : MonoBehaviour, IService {
 
     static FMODService fmod => ServiceManager.Instance.GetService<FMODService>();
 
-    public void PlaySong(SongAsset song) {
+    SongAsset song;
+
+    public void PlaySong(SongAsset nextSong) {
+        song = nextSong;
+
         director.playableAsset = song.timeline;
         director.time = 0;
         director.Evaluate();
 
         fmod.Play(song.audioEvent, true, true);
-        
+
         onPlay?.Invoke();
     }
 
@@ -45,12 +67,13 @@ sealed class SongService : MonoBehaviour, IService {
     public void SetSongTimeTo(double time) {
         director.time = time;
         director.Evaluate();
-        
+
         onUpdate?.Invoke();
     }
 
     public void StopSong() {
         onStop?.Invoke();
+        song = null;
     }
 
     public event Action onPlay;

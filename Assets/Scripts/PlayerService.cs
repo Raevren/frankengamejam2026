@@ -10,7 +10,9 @@ sealed class PlayerService : IService {
 
     [SerializeField] internal Ray quackRay;
 
-    bool isCorrect => true;
+    static SongService songService => ServiceManager.Instance.GetService<SongService>();
+    
+    bool isCorrect => songService.shouldStartQuackingNow;
 
     internal void StartQuack() => isQuacking = true;
 

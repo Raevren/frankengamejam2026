@@ -39,7 +39,7 @@ namespace Editor {
             timeline.name = ctx.assetPath.Split("/")[^1];
             asset.timeline = timeline;
 
-            double secondsPerTick = (double)240 / (asset.ticksPerNote * beatsPerMinute);
+            double secondsPerTick = asset.secondsPerTick;
             foreach (int key in Enumerable.Range(tracks.Keys.Min(), 1 + tracks.Keys.Max() - tracks.Keys.Min()).Reverse()) {
                 var track = timeline.CreateTrack<TapTrack>();
                 track.name = $"Note {key}";
