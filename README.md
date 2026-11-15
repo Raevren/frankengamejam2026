@@ -1,4 +1,4 @@
-# Dirigente. 
+# Dirigente 
 Die musikalischen Entchen haben fließig geübt und sind bereit für ihren ersten Auftritt.  
 Werde zur Dirigente und zeige was du kannst! 
 
