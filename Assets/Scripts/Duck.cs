@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Core;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -22,6 +23,7 @@ public class Duck : MonoBehaviour, IPointerClickHandler {
     [SerializeField] GameObject speechBubble;
 
     String oldSpeechBubbleText = "";
+    bool isCredits = false;
 
 
     void Start() {
@@ -74,13 +76,19 @@ public class Duck : MonoBehaviour, IPointerClickHandler {
 
 
     public void OnPointerClick(PointerEventData eventData) {
-        onClick?.Invoke();
+        if (isCredits)
+        {
+            Menu.Instance.HideCredits();
+        } else {
+            onClick?.Invoke();
+        }
     }
 
     public void SayName() {
         oldSpeechBubbleText = speechBubbleText.text;
         speechBubbleText.text = ducksName;
         speechBubble.active = true;
+        isCredits = true;
     }
 
     public void SayMenu() {
@@ -88,5 +96,6 @@ public class Duck : MonoBehaviour, IPointerClickHandler {
         if (oldSpeechBubbleText == "") {
             speechBubble.active = false;
         }
+        isCredits = false;
     }
 }
