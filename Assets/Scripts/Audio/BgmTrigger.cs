@@ -8,7 +8,7 @@ namespace Audio {
         [SerializeField] bool leadMuted;
 
         void Start() {
-            var service = ServiceManager.Instance.GetService<MusicService>();
+            var service = ServiceManager.Instance.GetService<FMODService>();
             service.Play(eventReference, leadMuted: leadMuted);
         }
     }

@@ -1,10 +1,11 @@
 using Audio;
 using Core;
 using FMODUnity;
+using Level;
 using UnityEngine;
 
 public class StartGameScript : MonoBehaviour {
-    [SerializeField] EventReference beginningMusic;
+    [SerializeField] SongAsset beginningMusic;
 
     static readonly int open = Animator.StringToHash("open");
 
@@ -17,5 +18,5 @@ public class StartGameScript : MonoBehaviour {
         _curtain.SetTrigger(open);
     }
 
-    public void StartGameReally() => ServiceManager.Instance.GetService<MusicService>().Play(beginningMusic);
+    public void StartGameReally() => ServiceManager.Instance.GetService<SongService>().PlaySong(beginningMusic);
 }

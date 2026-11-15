@@ -24,7 +24,7 @@ namespace Core {
 
         void RegisterServices() {
             //Register all services
-            _serviceManager.RegisterService<MusicService>();
+            _serviceManager.RegisterService<FMODService>();
             _serviceManager.RegisterService<PlayerService>();
             _serviceManager.RegisterService(songService);
             // All services should be registered by now
