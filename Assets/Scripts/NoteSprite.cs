@@ -21,6 +21,7 @@ sealed class NoteSprite : MonoBehaviour {
     [SerializeField] float speed = 1.5f;
     [SerializeField] float minAngle = -13f;
     [SerializeField] float maxAngle = 12f;
+    [SerializeField] ParticleSystem correctNoteParticle; 
 
     private float noiseSeed;
 
@@ -47,6 +48,8 @@ sealed class NoteSprite : MonoBehaviour {
             var color = image.color;
             color.a = onCorrectAlpha;
             image.color = color;
+            var particle = Instantiate(correctNoteParticle, transform);
+            particle.transform.position = transform.position;
         }
     }
 

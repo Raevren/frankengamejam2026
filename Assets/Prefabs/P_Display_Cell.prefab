@@ -93,3 +93,9 @@ MonoBehaviour:
   speed: 0.8
   minAngle: -13
   maxAngle: 12
+  correctNoteParticle: {fileID: 3532643351522233336, guid: db0185b031e69c8468d70f990cc0b948, type: 3}
+  note:
+    note: 0
+    start: 0
+    duration: 0
+  onCorrectAlpha: 0.5
