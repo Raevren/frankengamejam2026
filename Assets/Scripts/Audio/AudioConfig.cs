@@ -1,9 +1,13 @@
+using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
 
 namespace Audio {
     [CreateAssetMenu]
     public class AudioConfig : ScriptableObject {
-        [field: SerializeField] public EventReference quackSound { get; private set; }
+        [field: SerializeField] public EventReference QuackSound { get; private set; }
+        [ParamRef] public string paramLeadVolume;
+        [field: SerializeField] [ParamRef] public string ParamLTimedCorrectly { get; private set; }
+        [field: SerializeField] [ParamRef] public string ParamLNoteHeight { get; private set; }
     }
 }

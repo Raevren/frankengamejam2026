@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c1c512ef84fe4b41a348ab86af6b29b, type: 3}
   m_Name: AudioConfig
   m_EditorClassIdentifier: Assembly-CSharp::Audio.AudioConfig
-  <quackSound>k__BackingField:
+  <QuackSound>k__BackingField:
     Guid:
       Data1: -318212001
       Data2: 1279076082
       Data3: -1575893580
       Data4: 804822511
     Path: event:/SE_Quack
+  paramLeadVolume: LeadVolume
+  <ParamLTimedCorrectly>k__BackingField: IsTimedCorrectly
+  <ParamLNoteHeight>k__BackingField: NoteHeight

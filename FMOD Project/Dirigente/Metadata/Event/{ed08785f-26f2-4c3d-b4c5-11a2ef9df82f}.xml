@@ -213,7 +213,7 @@
 	<object class="MixerBusPanner" id="{677dc936-1c56-4c7e-9035-9a12c6c961f4}" />
 	<object class="EventSound" id="{882e44ef-ea01-420d-9959-840db6eaaee0}">
 		<property name="length">
-			<value>0.027081280788177339</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{7a5b582b-cd05-4627-82d2-ea18c5526c74}</destination>
@@ -241,7 +241,7 @@
 	</object>
 	<object class="EventSound" id="{9a6d9ce6-af5e-4632-9515-6a7986bc8754}">
 		<property name="length">
-			<value>0.027081280788177339</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{600967ff-dbf1-4182-b9de-d0209d2d71aa}</destination>
@@ -267,7 +267,7 @@
 	</object>
 	<object class="EventSound" id="{5d797db0-3d9e-4d2c-928d-02b8abe03860}">
 		<property name="length">
-			<value>0.027081280788177339</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{18751d47-c304-45ff-ba12-d01c5231fa14}</destination>
@@ -293,7 +293,7 @@
 	</object>
 	<object class="EventSound" id="{2b27ff94-3eae-4f0c-811a-f30ebbe83d2f}">
 		<property name="length">
-			<value>0.027081280788177339</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{9e0fc9ab-78dd-43af-9315-ed68d9344d3e}</destination>
@@ -319,7 +319,7 @@
 	</object>
 	<object class="EventSound" id="{1893f13b-6184-4ed7-a8ff-3b7bda8b0a73}">
 		<property name="length">
-			<value>0.027081280788177339</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{37c19bc5-8791-46b6-a7ef-b54398417b8c}</destination>
@@ -345,7 +345,7 @@
 	</object>
 	<object class="EventSound" id="{5c3f7932-bf01-40fe-a0fe-2d69b9dd3b70}">
 		<property name="length">
-			<value>0.027081280788177339</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{af3ccfa2-3fec-42f9-8763-5a4bbfd2c4e3}</destination>
@@ -371,7 +371,7 @@
 	</object>
 	<object class="EventSound" id="{b1bbc512-efef-4a61-92cf-530ce35b937b}">
 		<property name="length">
-			<value>0.027081280788177339</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{0ff1478a-1e25-4a68-81c4-d930c2f1ca03}</destination>
@@ -397,7 +397,7 @@
 	</object>
 	<object class="EventSound" id="{a2286b33-1ad1-480f-a13e-dd50578f07a7}">
 		<property name="length">
-			<value>0.027081280788177339</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{79f8e06c-e24b-43f1-be60-b130385a5309}</destination>
@@ -423,7 +423,7 @@
 	</object>
 	<object class="EventSound" id="{dd93cbb7-2c15-4804-b92f-f139ee5e798c}">
 		<property name="length">
-			<value>0.027081280788177339</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{541155df-9ce2-433c-8af8-9a338f62cef4}</destination>
@@ -449,7 +449,7 @@
 	</object>
 	<object class="EventSound" id="{140800c0-d72c-4c25-b51b-58ca6187d2ad}">
 		<property name="length">
-			<value>0.027081280788177339</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{f829536c-086f-47fd-b5b3-c35848eac704}</destination>
@@ -475,7 +475,7 @@
 	</object>
 	<object class="EventSound" id="{0447aff6-07af-4400-a152-c5aea267df37}">
 		<property name="length">
-			<value>0.027081280788177339</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{a7aa937f-8496-4072-892c-2515171b90e6}</destination>
@@ -501,7 +501,7 @@
 	</object>
 	<object class="EventSound" id="{c90b8079-289e-4b11-b45d-1a658afaf6d7}">
 		<property name="length">
-			<value>0.027081280788177339</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{5c5710f8-d19f-4876-aacb-cde2d1863835}</destination>
@@ -527,7 +527,7 @@
 	</object>
 	<object class="EventSound" id="{69b7e245-1404-4caf-bf1d-837554249298}">
 		<property name="length">
-			<value>0.027081280788177339</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="triggerConditions">
 			<destination>{51f1c126-876c-439f-9493-b81a308cdc2d}</destination>
@@ -553,10 +553,10 @@
 	</object>
 	<object class="LoopRegion" id="{9b99b654-dc10-44ff-a482-e5bc4a55d684}">
 		<property name="position">
-			<value>0.02</value>
+			<value>0</value>
 		</property>
 		<property name="length">
-			<value>0.0070812807881773382</value>
+			<value>0.0050000000000000001</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{e4d8e879-66fb-4a9f-a392-f4dcea62d1ff}</destination>
@@ -594,10 +594,10 @@
 	<object class="MixerBusPanner" id="{896023d8-61e1-4e7b-b545-a8ef1f3b2574}" />
 	<object class="ParameterCondition" id="{600967ff-dbf1-4182-b9de-d0209d2d71aa}">
 		<property name="minimum">
-			<value>1</value>
+			<value>60</value>
 		</property>
 		<property name="maximum">
-			<value>1</value>
+			<value>60</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{dc01c3b2-263e-4579-b163-0b2c981cd75a}</destination>
@@ -622,10 +622,10 @@
 	<object class="MixerBusPanner" id="{953cbe83-36e6-46bf-ab99-4a2a0249f68c}" />
 	<object class="ParameterCondition" id="{18751d47-c304-45ff-ba12-d01c5231fa14}">
 		<property name="minimum">
-			<value>2</value>
+			<value>61</value>
 		</property>
 		<property name="maximum">
-			<value>2</value>
+			<value>61</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{dc01c3b2-263e-4579-b163-0b2c981cd75a}</destination>
@@ -661,10 +661,10 @@
 	</object>
 	<object class="ParameterCondition" id="{e7199077-0ec6-4f6d-a7c1-45bdc337eab6}">
 		<property name="minimum">
-			<value>3</value>
+			<value>62</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>62</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{dc01c3b2-263e-4579-b163-0b2c981cd75a}</destination>
@@ -689,10 +689,10 @@
 	</object>
 	<object class="ParameterCondition" id="{5f4fe2d8-9e6a-4b19-89b4-3657bff1f933}">
 		<property name="minimum">
-			<value>4</value>
+			<value>63</value>
 		</property>
 		<property name="maximum">
-			<value>4</value>
+			<value>63</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{dc01c3b2-263e-4579-b163-0b2c981cd75a}</destination>
@@ -717,10 +717,10 @@
 	</object>
 	<object class="ParameterCondition" id="{8710eb6f-945d-4939-a5cf-8e9c7cca5caf}">
 		<property name="minimum">
-			<value>5</value>
+			<value>64</value>
 		</property>
 		<property name="maximum">
-			<value>5</value>
+			<value>64</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{dc01c3b2-263e-4579-b163-0b2c981cd75a}</destination>
@@ -745,10 +745,10 @@
 	</object>
 	<object class="ParameterCondition" id="{0581e5f2-2e6a-4438-a205-71e10ddc0e77}">
 		<property name="minimum">
-			<value>6</value>
+			<value>65</value>
 		</property>
 		<property name="maximum">
-			<value>6</value>
+			<value>65</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{dc01c3b2-263e-4579-b163-0b2c981cd75a}</destination>
@@ -773,10 +773,10 @@
 	</object>
 	<object class="ParameterCondition" id="{b8a6f661-f7fb-4b80-9921-50ea58b81255}">
 		<property name="minimum">
-			<value>7</value>
+			<value>66</value>
 		</property>
 		<property name="maximum">
-			<value>7</value>
+			<value>66</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{dc01c3b2-263e-4579-b163-0b2c981cd75a}</destination>
@@ -801,10 +801,10 @@
 	</object>
 	<object class="ParameterCondition" id="{0dc046bc-277f-4ead-9c95-bf20eedb7684}">
 		<property name="minimum">
-			<value>8</value>
+			<value>67</value>
 		</property>
 		<property name="maximum">
-			<value>8</value>
+			<value>67</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{dc01c3b2-263e-4579-b163-0b2c981cd75a}</destination>
@@ -829,10 +829,10 @@
 	</object>
 	<object class="ParameterCondition" id="{2134313a-35dd-410c-8b02-6bcdee8fcffd}">
 		<property name="minimum">
-			<value>9</value>
+			<value>68</value>
 		</property>
 		<property name="maximum">
-			<value>9</value>
+			<value>68</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{dc01c3b2-263e-4579-b163-0b2c981cd75a}</destination>
@@ -857,10 +857,10 @@
 	</object>
 	<object class="ParameterCondition" id="{7ab0d896-5675-4591-afdb-48f61ea7c954}">
 		<property name="minimum">
-			<value>10</value>
+			<value>69</value>
 		</property>
 		<property name="maximum">
-			<value>10</value>
+			<value>69</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{dc01c3b2-263e-4579-b163-0b2c981cd75a}</destination>
@@ -885,10 +885,10 @@
 	</object>
 	<object class="ParameterCondition" id="{95c0198c-82d3-41bb-b839-88f36e9700c3}">
 		<property name="minimum">
-			<value>11</value>
+			<value>70</value>
 		</property>
 		<property name="maximum">
-			<value>11</value>
+			<value>70</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{dc01c3b2-263e-4579-b163-0b2c981cd75a}</destination>
@@ -913,10 +913,10 @@
 	</object>
 	<object class="ParameterCondition" id="{f6a8c504-2770-4ff0-9fb6-f7f04c6a2def}">
 		<property name="minimum">
-			<value>12</value>
+			<value>71</value>
 		</property>
 		<property name="maximum">
-			<value>12</value>
+			<value>71</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{dc01c3b2-263e-4579-b163-0b2c981cd75a}</destination>

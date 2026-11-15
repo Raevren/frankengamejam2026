@@ -1,3 +1,4 @@
+using Audio;
 using Core;
 using FMOD.Studio;
 using FMODUnity;
@@ -7,6 +8,7 @@ using STOP_MODE = FMOD.Studio.STOP_MODE;
 sealed class PlayerService : IService {
     [SerializeField] internal bool isQuacking;
     EventInstance? _quackSoundEvent;
+    FMODService fmodService = ServiceManager.Instance.GetService<FMODService>();
 
     internal Vector3 quackPosition {
         get => quackRay.origin;
@@ -16,26 +18,12 @@ sealed class PlayerService : IService {
 
     internal void StartQuack() {
         isQuacking = true;
-        
-        // TODO trigger sound
-        //ReleaseQuackSound();
-        //_quackSoundEvent = RuntimeManager.CreateInstance(Bootstrap.Instance.AudioConfig.quackSound);
-        //_quackSoundEvent.Value.start();
+        fmodService.PlayQuack(true, 70);
     }
 
     internal void StopQuack() {
         isQuacking = false;
-        //ReleaseQuackSound();
-    }
-
-    void ReleaseQuackSound() {
-        if (_quackSoundEvent == null) {
-            return;
-        }
-
-        _quackSoundEvent.Value.stop(STOP_MODE.ALLOWFADEOUT);
-        _quackSoundEvent.Value.release();
-        _quackSoundEvent = null;
+        fmodService.ReleaseQuackSound();
     }
 
     public void OnRegister() { }
