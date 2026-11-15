@@ -7,7 +7,13 @@ namespace Audio {
     public class AudioConfig : ScriptableObject {
         [field: SerializeField] public EventReference QuackSound { get; private set; }
         [ParamRef] public string paramLeadVolume;
-        [field: SerializeField] [ParamRef] public string ParamLTimedCorrectly { get; private set; }
-        [field: SerializeField] [ParamRef] public string ParamLNoteHeight { get; private set; }
+
+        [field: SerializeField]
+        [field: ParamRef]
+        public string ParamLTimedCorrectly { get; private set; }
+
+        [field: SerializeField]
+        [field: ParamRef]
+        public string ParamLNoteHeight { get; private set; }
     }
 }
