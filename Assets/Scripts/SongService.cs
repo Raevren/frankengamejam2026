@@ -13,19 +13,23 @@ sealed class SongService : MonoBehaviour, IService {
 
     [SerializeField] float quackGraceTimeMilliseconds = 0.1f;
 
-    internal bool shouldStartQuackingNow => HasNotesAround(director.time, quackGraceTimeMilliseconds);
-
-    bool HasNotesAround(double timeMilliseconds, float graceTimeMilliseconds) {
+    internal bool TryStartQuackingNow(out Note note) {
         if (!song) {
+            note = default;
             return false;
         }
 
-        int startTimeTicks = (int)((timeMilliseconds - graceTimeMilliseconds) * song.ticksPerSecond);
-        int endTimeTicks = (int)((timeMilliseconds + graceTimeMilliseconds) * song.ticksPerSecond);
+        double timeMilliseconds = director.time;
+        int startTimeTicks = (int)((timeMilliseconds - quackGraceTimeMilliseconds) * song.ticksPerSecond);
+        int currentTimeTicks = (int)(timeMilliseconds * song.ticksPerSecond);
+        int endTimeTicks = (int)((timeMilliseconds + quackGraceTimeMilliseconds) * song.ticksPerSecond);
 
-        return song
+        note = song
             .notes
-            .Any(n => n.start > startTimeTicks && n.start < endTimeTicks);
+            .Where(n => n.start > startTimeTicks && n.start < endTimeTicks)
+            .OrderBy(n => Mathf.Abs(n.start - currentTimeTicks))
+            .FirstOrDefault();
+        return note is not null;
     }
 
     [SerializeField] internal PlayableDirector director;
