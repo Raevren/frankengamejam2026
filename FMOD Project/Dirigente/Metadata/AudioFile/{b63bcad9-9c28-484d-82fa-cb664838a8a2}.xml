@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b63bcad9-9c28-484d-82fa-cb664838a8a2}">
+		<property name="assetPath">
+			<value>sos_inst.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>63.310340136054421</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{74cff4a5-2c82-49b3-91f8-d4dc2506e49e}</destination>
+		</relationship>
+	</object>
+</objects>

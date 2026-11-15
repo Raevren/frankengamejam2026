@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c9d39c8fa48654ccd963402767fcecd6
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 7fc8ffc82807b514286d245eb2c89e0d, type: 3}
+  beatsPerMinute: 145
+  audioEvent:
+    Guid:
+      Data1: 960562775
+      Data2: 1307538107
+      Data3: 714747055
+      Data4: -1727302939
+    Path: event:/MUS_SoS
