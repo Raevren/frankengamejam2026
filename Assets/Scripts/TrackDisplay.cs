@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Core;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
@@ -26,13 +27,28 @@ sealed class TrackDisplay : MonoBehaviour {
         }
     }
 
-    [SerializeField] PlayableDirector director;
+    static SongService service => ServiceManager.Instance.GetService<SongService>();
+    static PlayableDirector director => service.director;
     [SerializeField] RectTransform rowPrefab;
     [SerializeField] RectTransform quackPrefab;
 
     TrackRowDisplay[] rows = Array.Empty<TrackRowDisplay>();
 
-    void Start() {
+    void OnEnable() {
+        service.onPlay += StartSong;
+        service.onUpdate += UpdateSong;
+        service.onStop += StopSong;
+    }
+
+    void OnDisable() {
+        service.onPlay -= StartSong;
+        service.onUpdate -= UpdateSong;
+        service.onStop -= StopSong;
+    }
+
+    void StartSong() {
+        StopSong();
+        
         if (director.playableAsset is not TimelineAsset timeline) {
             return;
         }
@@ -44,15 +60,17 @@ sealed class TrackDisplay : MonoBehaviour {
             .ToArray();
     }
 
-    void Update() {
+    void UpdateSong() {
         if (transform is RectTransform rectTransform) {
             rectTransform.anchoredPosition = new Vector2((float)-director.time, 0);
         }
     }
 
-    void OnDestroy() {
+    void StopSong() {
         foreach (var row in rows) {
             Destroy(row.transform.gameObject);
         }
+
+        rows = Array.Empty<TrackRowDisplay>();
     }
 }

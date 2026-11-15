@@ -6,6 +6,9 @@ namespace Core {
         public static Bootstrap Instance { get; private set; }
         [field: SerializeField] public AudioConfig AudioConfig { get; private set; }
         ServiceManager _serviceManager;
+        
+        [SerializeField]
+        SongService songService;
 
         void Awake() {
             if (Instance != null && Instance != this) {
@@ -24,7 +27,7 @@ namespace Core {
             //Register all services
             _serviceManager.RegisterService<MusicService>();
             _serviceManager.RegisterService<PlayerService>();
-            _serviceManager.RegisterService<SongService>();
+            _serviceManager.RegisterService(songService);
             // All services should be registered by now
             _serviceManager.OnAllRegistered();
         }

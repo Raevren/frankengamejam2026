@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2677063232595171658}
-  - component: {fileID: 8908995589012368179}
   - component: {fileID: -8334475504561039564}
   m_Layer: 0
   m_Name: P_SongPlayer
@@ -33,23 +32,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!320 &8908995589012368179
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2561027395565614776}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 6647851148261682866, guid: f180d770c41014257b914f4d809b58fd, type: 3}
-  m_InitialState: 1
-  m_WrapMode: 0
-  m_DirectorUpdateMode: 1
-  m_InitialTime: -8
-  m_SceneBindings: []
-  m_ExposedReferences:
-    m_References: []
 --- !u!114 &-8334475504561039564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Judge
   isCorrect: 0
   isCorrectParameter: IsTimedCorrectly
+  song: {fileID: -717553813847926385, guid: f180d770c41014257b914f4d809b58fd, type: 3}

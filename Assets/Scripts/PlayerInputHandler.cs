@@ -9,7 +9,11 @@ sealed class PlayerInputHandler : MonoBehaviour {
         get => ServiceManager.Instance.GetService<PlayerService>();
     }
 
-    [SerializeField] Camera mainCamera;
+    Camera mainCamera => _mainCamera
+        ? _mainCamera
+        : _mainCamera = Camera.main;
+
+    Camera _mainCamera;
 
     void Awake() {
         actions = new InputSystem_Actions();

@@ -11,13 +11,16 @@ namespace Core {
 
         internal ServiceManager() => Instance ??= this;
 
-        public void RegisterService<T>() where T : IService {
+        public void RegisterService<T>() where T : IService, new() {
+            RegisterService(new T());
+        }
+
+        public void RegisterService<T>(T service) where T : IService {
             if (_services.ContainsKey(typeof(T))) {
                 Debug.LogWarning($"[ServiceManager] {typeof(T).Name} is already registered");
                 return;
             }
 
-            IService service = Activator.CreateInstance<T>();
             _services.Add(typeof(T), service);
             service.OnRegister();
         }
@@ -42,8 +45,8 @@ namespace Core {
         }
 
         internal void OnAllRegistered() {
-            foreach (var service in _services) {
-                service.Value.OnAllRegistered();
+            foreach (var service in _services.Values) {
+                service.OnAllRegistered();
             }
 
             AllRegistered = true;

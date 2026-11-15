@@ -7,31 +7,60 @@ public class Duck : MonoBehaviour {
         
     Animator animator;
 
-    [SerializeField] SpriteRenderer duckTopRenderer;
+    [SerializeField] SpriteRenderer duckTopActiveRenderer;
+    [SerializeField] SpriteRenderer duckTopIdleRenderer;
     [SerializeField] SpriteRenderer duckBottomRenderer;
+    
     [SerializeField] SpriteRenderer duckSleepRenderer;
 
     
     void Start() {
         animator = GetComponent<Animator>();
         StartCoroutine(SetRandomSpeed());
+        if (!gameObject.CompareTag("Dirigente") && Random.Range(0, 2) == 1) {
+            Flip();
+        }
     }
 
     IEnumerator SetRandomSpeed() {
-        animator.speed =  Math.Min(1, Math.Max(0, Random.Range(0, 10)-7));
-        yield return new WaitForSecondsRealtime(1);
-        yield return SetRandomSpeed();
+        var wait = new WaitForSecondsRealtime(1);
+        while (true) {
+            animator.speed = Mathf.Clamp(Random.Range(0, 10) - 7, 0, 1);
+            yield return wait;    
+        }
     }
 
+    #region The Looks!
+    
     void Flip() {
-        duckTopRenderer.flipX = !duckTopRenderer.flipX;
+        duckTopIdleRenderer.flipX = !duckTopIdleRenderer.flipX;
+        duckTopActiveRenderer.flipX = !duckTopActiveRenderer.flipX;
         duckBottomRenderer.flipX = !duckBottomRenderer.flipX;
         duckSleepRenderer.flipX = !duckSleepRenderer.flipX;
     }
     
-    void ToggleSleep() {
-        duckTopRenderer.enabled = !duckTopRenderer.enabled;
-        duckBottomRenderer.enabled = !duckBottomRenderer.enabled;
-        duckSleepRenderer.enabled = !duckSleepRenderer.enabled;
+    void Sleep() {
+        duckTopIdleRenderer.enabled = false;
+        duckTopActiveRenderer.enabled = false;
+        duckBottomRenderer.enabled = false;
+        duckSleepRenderer.enabled = true;
     }
+    
+    void Idle() {
+        duckTopIdleRenderer.enabled = true;
+        duckTopActiveRenderer.enabled = false;
+        duckBottomRenderer.enabled = true;
+        duckSleepRenderer.enabled = false;
+    }
+    
+    void Active() {
+        duckTopIdleRenderer.enabled = false;
+        duckTopActiveRenderer.enabled = true;
+        duckBottomRenderer.enabled = true;
+        duckSleepRenderer.enabled = false;
+    }
+    
+    #endregion
+    
+    
 }
