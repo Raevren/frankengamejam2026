@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Audio;
 using Core;
@@ -13,7 +14,10 @@ public class StartGameScript : MonoBehaviour {
 
     [SerializeField] Animator _curtain;
 
+    bool isStarted = false;
+    
     public void StartGame() {
+        isStarted = true;
         _curtain.SetTrigger(open);
     }
 
@@ -30,9 +34,30 @@ public class StartGameScript : MonoBehaviour {
         {
             yield return null;
         }
+        SceneManager.LoadScene("Loading", LoadSceneMode.Additive);
+        
         SceneManager.LoadScene("PascalStart", LoadSceneMode.Additive);
+        yield return new WaitForSecondsRealtime(1);
+        
         SceneManager.UnloadSceneAsync("Menu");
+        SceneManager.UnloadSceneAsync("Loading");
     }
-    
+
+    public void Update() {
+        if (isStarted) {
+            return;
+        }
+        
+        if(SceneManager.sceneCount > 1) {
+            return;
+        }
+        
+        if(SceneManager.GetActiveScene().name != "PascalStart") {
+            return;
+        }
+        
+        StartGame();
+    }
+
     public void StartGameReally() => ServiceManager.Instance.GetService<SongService>().PlaySong(beginningMusic);
 }

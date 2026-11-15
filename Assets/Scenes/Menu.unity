@@ -1701,7 +1701,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StartGameScript
   beginningMusic: {fileID: 0}
   _curtain: {fileID: 1631477372}
-  _mainMenue: {fileID: 1569660904}
 --- !u!1 &1836571024
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,6 +2661,34 @@ PrefabInstance:
     - target: {fileID: 5545640507783798548, guid: 315413525cda456479c660883cae9326, type: 3}
       propertyPath: m_Name
       value: Selina
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106920563096450562, guid: 315413525cda456479c660883cae9326, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106920563096450562, guid: 315413525cda456479c660883cae9326, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106920563096450562, guid: 315413525cda456479c660883cae9326, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1631477373}
+    - target: {fileID: 6106920563096450562, guid: 315413525cda456479c660883cae9326, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106920563096450562, guid: 315413525cda456479c660883cae9326, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106920563096450562, guid: 315413525cda456479c660883cae9326, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StartGameScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106920563096450562, guid: 315413525cda456479c660883cae9326, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7185235318222594491, guid: 315413525cda456479c660883cae9326, type: 3}
       propertyPath: m_text
