@@ -495,6 +495,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8126734292915267492, guid: e0859282d043db84fad5dfecb878fe1b, type: 3}
+      propertyPath: m_Name
+      value: CickCollider
+      objectReference: {fileID: 0}
     - target: {fileID: 8662186246216006019, guid: e0859282d043db84fad5dfecb878fe1b, type: 3}
       propertyPath: m_Name
       value: Speechbubble
