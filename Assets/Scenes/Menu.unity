@@ -2399,6 +2399,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6821642089799075715, guid: b6195a0ebbfad094eaae56f56d8c32e5, type: 3}
+      propertyPath: m_text
+      value: Wer ist hier verantwortlich?
+      objectReference: {fileID: 0}
     - target: {fileID: 7628079346313859130, guid: b6195a0ebbfad094eaae56f56d8c32e5, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
       value: 1

@@ -18,11 +18,11 @@ public class Duck : MonoBehaviour, IPointerClickHandler {
 
     [SerializeField] SpriteRenderer duckSleepRenderer;
 
-    [SerializeField] String ducksName = "Donald";
+    [SerializeField] string ducksName = "Donald";
     [SerializeField] TextMeshProUGUI speechBubbleText;
     [SerializeField] GameObject speechBubble;
 
-    String oldSpeechBubbleText = "";
+    string oldSpeechBubbleText = "";
     bool isCredits = false;
 
 
@@ -76,8 +76,7 @@ public class Duck : MonoBehaviour, IPointerClickHandler {
 
 
     public void OnPointerClick(PointerEventData eventData) {
-        if (isCredits)
-        {
+        if (isCredits) {
             Menu.Instance.HideCredits();
         } else {
             onClick?.Invoke();
@@ -87,15 +86,15 @@ public class Duck : MonoBehaviour, IPointerClickHandler {
     public void SayName() {
         oldSpeechBubbleText = speechBubbleText.text;
         speechBubbleText.text = ducksName;
-        speechBubble.active = true;
+        speechBubble.SetActive(true);
+
         isCredits = true;
     }
 
     public void SayMenu() {
         speechBubbleText.text = oldSpeechBubbleText;
-        if (oldSpeechBubbleText == "") {
-            speechBubble.active = false;
-        }
+        speechBubble.SetActive(!string.IsNullOrEmpty(oldSpeechBubbleText));
+
         isCredits = false;
     }
 }
