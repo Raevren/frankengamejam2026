@@ -5,6 +5,9 @@ Werde zur Dirigente und zeige was du kannst!
  In diesem 2D Rythmusspiel steuerst du eine Ente mit einem großen Traum: Die beste Dirigente auf der ganzen Welt werden.  
  Folge einfach dem Beat und **Toi Toi Toi**!
 
+Jetzt spielen
+https://raevren.itch.io/dirigente
+
 🐤🐤🐤🐤🐤
 ### Bühnen-Personal:
 - **Daniel**: Gamedesign, Programmieren

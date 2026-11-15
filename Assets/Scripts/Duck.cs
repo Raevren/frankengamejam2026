@@ -23,9 +23,11 @@ public class Duck : MonoBehaviour {
     }
 
     IEnumerator SetRandomSpeed() {
-        animator.speed =  Math.Min(1, Math.Max(0, Random.Range(0, 10)-7));
-        yield return new WaitForSecondsRealtime(1);
-        yield return SetRandomSpeed();
+        var wait = new WaitForSecondsRealtime(1);
+        while (true) {
+            animator.speed = Mathf.Clamp(Random.Range(0, 10) - 7, 0, 1);
+            yield return wait;    
+        }
     }
 
     #region The Looks!
