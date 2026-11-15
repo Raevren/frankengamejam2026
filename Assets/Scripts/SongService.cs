@@ -1,4 +1,5 @@
 using System;
+using Audio;
 using Core;
 using Level;
 using UnityEngine;
@@ -23,12 +24,22 @@ sealed class SongService : MonoBehaviour, IService {
 
     public void OnAllRegistered() { }
 
+    static FMODService fmod => ServiceManager.Instance.GetService<FMODService>();
+
     public void PlaySong(SongAsset song) {
         director.playableAsset = song.timeline;
         director.time = 0;
         director.Evaluate();
+
+        fmod.Play(song.audioEvent, true, true);
         
         onPlay?.Invoke();
+    }
+
+    void LateUpdate() {
+        if (fmod.TryGetTime(out double time)) {
+            SetSongTimeTo(time);
+        }
     }
 
     public void SetSongTimeTo(double time) {

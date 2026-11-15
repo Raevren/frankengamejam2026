@@ -10,6 +10,8 @@ sealed class PlayerService : IService {
 
     [SerializeField] internal Ray quackRay;
 
+    bool isCorrect => true;
+
     internal void StartQuack() => isQuacking = true;
 
     internal void StopQuack() => isQuacking = false;

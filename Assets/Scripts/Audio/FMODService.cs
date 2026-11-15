@@ -1,11 +1,12 @@
 using Core;
+using FMOD;
 using FMOD.Studio;
 using FMODUnity;
-using UnityEngine;
+using Debug = UnityEngine.Debug;
 using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 namespace Audio {
-    public class MusicService : IService {
+    public class FMODService : IService {
         EventInstance? _eventInstance;
         const string PARAM_LEAD_VOLUME = "LeadVolume";
 
@@ -57,5 +58,16 @@ namespace Audio {
         public void OnAllRegistered() { }
 
         #endregion
+
+        public bool TryGetTime(out double time) {
+            if (!_eventInstance.HasValue) {
+                time = 0;
+                return false;
+            }
+
+            var result = _eventInstance.Value.getTimelinePosition(out int timeMilliseconds);
+            time = timeMilliseconds / 1000f;
+            return result == RESULT.OK;
+        }
     }
 }

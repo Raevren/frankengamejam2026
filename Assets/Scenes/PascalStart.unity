@@ -1102,13 +1102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a5577079f8704d52af08b3305dbd022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartGameScript
-  beginningMusic:
-    Guid:
-      Data1: -17518469
-      Data2: 1182498063
-      Data3: 2032572047
-      Data4: 444900453
-    Path: event:/MUS_Practice
+  beginningMusic: {fileID: -717553813847926385, guid: f180d770c41014257b914f4d809b58fd, type: 3}
   _curtain: {fileID: 1631477372}
   _mainMenue: {fileID: 1569660904}
 --- !u!1 &1941267486

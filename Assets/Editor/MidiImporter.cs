@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using FMODUnity;
 using Level;
 using UnityEditor.AssetImporters;
 using UnityEngine;
@@ -11,11 +12,14 @@ namespace Editor {
     [ScriptedImporter(4, "mid")]
     sealed class MidiImporter : ScriptedImporter {
         [SerializeField] int beatsPerMinute = 103;
+        [SerializeField]
+        public EventReference audioEvent;
 
         public override void OnImportAsset(AssetImportContext ctx) {
             var asset = ScriptableObject.CreateInstance<SongAsset>();
 
             var file = new MidiFile(File.ReadAllBytes(ctx.assetPath));
+            asset.audioEvent = audioEvent;
             asset.beatsPerMinute = beatsPerMinute;
             asset.ticksPerNote = 4 * file.TicksPerQuarterNote;
             asset.notes = ExtractNotes(file).ToArray();
