@@ -1,4 +1,6 @@
+using System;
 using Core;
+using Level;
 using UnityEngine;
 
 public class QuackDisplay : MonoBehaviour {
@@ -7,8 +9,25 @@ public class QuackDisplay : MonoBehaviour {
     }
 
     [SerializeField] GameObject quackPrefab;
+    [SerializeField] ParticleSystem wrongNoteParticles;
+    [SerializeField] ParticleSystem niceNoteParticles;
 
     GameObject quackInstance;
+
+    void Start() {
+        player.onWrongNote += DisplayWrongNote;
+        player.onCorrectNote += DisplayNiceNote;
+    }
+    
+    void DisplayWrongNote() {
+        var par = Instantiate(wrongNoteParticles, transform);
+        par.transform.position = player.quackPosition;
+    }
+    
+    void DisplayNiceNote(Note note) {
+        var par = Instantiate(niceNoteParticles, transform);
+        par.transform.position = player.quackPosition;
+    }
 
     void Update() {
         bool doesExist = quackInstance;

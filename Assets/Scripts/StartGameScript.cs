@@ -14,6 +14,7 @@ public class StartGameScript : MonoBehaviour {
 
     [SerializeField] Animator _curtain;
     
+    [SerializeField] ParticleSystem _finishParticles;
     
 
     bool isStarted = false;
@@ -61,5 +62,16 @@ public class StartGameScript : MonoBehaviour {
         StartGame();
     }
 
-    public void StartGameReally() => ServiceManager.Instance.GetService<SongService>().PlaySong(beginningMusic);
+    public void StartGameReally() {
+        var songServcie = ServiceManager.Instance.GetService<SongService>();
+
+        songServcie.onStop += EndGame;
+        
+        songServcie.PlaySong(beginningMusic);
+        
+    }
+
+    private void EndGame() {
+        Instantiate(_finishParticles);
+    }
 }
