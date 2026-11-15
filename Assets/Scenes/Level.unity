@@ -628,6 +628,10 @@ PrefabInstance:
       propertyPath: director
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6156300045161849519, guid: 624a1cc3d65d45c46b43675c26cbe6c6, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7096650276451321097, guid: 624a1cc3d65d45c46b43675c26cbe6c6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

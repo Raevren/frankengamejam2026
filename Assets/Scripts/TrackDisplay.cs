@@ -48,7 +48,7 @@ sealed class TrackDisplay : MonoBehaviour {
 
     void StartSong() {
         StopSong();
-        
+
         if (director.playableAsset is not TimelineAsset timeline) {
             return;
         }
@@ -60,9 +60,9 @@ sealed class TrackDisplay : MonoBehaviour {
             .ToArray();
     }
 
-    void UpdateSong() {
+    void UpdateSong(double time) {
         if (transform is RectTransform rectTransform) {
-            rectTransform.anchoredPosition = new Vector2((float)-director.time, 0);
+            rectTransform.anchoredPosition = new Vector2((float)-time, 0);
         }
     }
 

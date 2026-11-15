@@ -74,7 +74,7 @@ sealed class SongService : MonoBehaviour, IService {
         director.time = time;
         director.Evaluate();
 
-        onUpdate?.Invoke();
+        onUpdate?.Invoke(time);
     }
 
     public void StopSong() {
@@ -83,6 +83,6 @@ sealed class SongService : MonoBehaviour, IService {
     }
 
     public event Action onPlay;
-    public event Action onUpdate;
+    public event Action<double> onUpdate;
     public event Action onStop;
 }
