@@ -591,6 +591,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8334475504561039564, guid: 12d9a06cc911c5344a350eecf5dc74a6, type: 3}
+      propertyPath: song
+      value: 
+      objectReference: {fileID: -717553813847926385, guid: c9d39c8fa48654ccd963402767fcecd6, type: 3}
     - target: {fileID: 2561027395565614776, guid: 12d9a06cc911c5344a350eecf5dc74a6, type: 3}
       propertyPath: m_Name
       value: P_SongPlayer
