@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -16,6 +17,9 @@ public class Duck : MonoBehaviour, IPointerClickHandler {
     [SerializeField] SpriteRenderer duckBottomRenderer;
     
     [SerializeField] SpriteRenderer duckSleepRenderer;
+
+    [SerializeField] String ducksName = "Donald";
+    [SerializeField] TextMeshProUGUI speechBubble;
 
     
     void Start() {
@@ -69,5 +73,9 @@ public class Duck : MonoBehaviour, IPointerClickHandler {
 
     public void OnPointerClick(PointerEventData eventData) {
         onClick?.Invoke();
+    }
+
+    public void SayName() {
+        speechBubble.text = ducksName;
     }
 }
