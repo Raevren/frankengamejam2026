@@ -21,11 +21,14 @@ sealed class SongService : MonoBehaviour, IService {
 
         double timeMilliseconds = director.time;
         int startTimeTicks = (int)((timeMilliseconds - quackGraceTimeMilliseconds) * song.ticksPerSecond);
+        int currentTimeTicks = (int)(timeMilliseconds * song.ticksPerSecond);
         int endTimeTicks = (int)((timeMilliseconds + quackGraceTimeMilliseconds) * song.ticksPerSecond);
 
         note = song
             .notes
-            .FirstOrDefault(n => n.start > startTimeTicks && n.start < endTimeTicks);
+            .Where(n => n.start > startTimeTicks && n.start < endTimeTicks)
+            .OrderBy(n => Mathf.Abs(n.start - currentTimeTicks))
+            .FirstOrDefault();
         return note is not null;
     }
 
