@@ -13,6 +13,8 @@ public class StartGameScript : MonoBehaviour {
     static readonly int close = Animator.StringToHash("close");
 
     [SerializeField] Animator _curtain;
+    
+    
 
     bool isStarted = false;
     
