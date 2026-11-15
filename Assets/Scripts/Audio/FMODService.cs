@@ -8,9 +8,9 @@ using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 namespace Audio {
     public class FMODService : IService {
-        public event Action<EventInstance> OnBgmEnded;
+        public static event Action<EventInstance> OnBgmEnded;
         readonly AudioConfig _config;
-        EventInstance? _musicEventInstance, _quackEventInstance;
+        static EventInstance? _musicEventInstance, _quackEventInstance;
 
         public FMODService(AudioConfig config) {
             _config = config;
@@ -58,7 +58,7 @@ namespace Audio {
         }
 
         [AOT.MonoPInvokeCallback(typeof(EVENT_CALLBACK))]
-        RESULT BgmEventCallback(EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr) {
+        static RESULT BgmEventCallback(EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr) {
             if (_musicEventInstance != null && type == EVENT_CALLBACK_TYPE.STOPPED) {
                 OnBgmEnded?.Invoke(_musicEventInstance.Value);
                 Debug.Log("[MusicService] End of BGM");

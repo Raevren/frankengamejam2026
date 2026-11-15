@@ -74,7 +74,7 @@ IEnumerator LoadLevelRoutine()
     public void StartGameReally() {
         var songServcie = ServiceManager.Instance.GetService<SongService>();
 
-        ServiceManager.Instance.GetService<FMODService>().OnBgmEnded += EndGame;
+        FMODService.OnBgmEnded += EndGame;
 
 
         if (PlayerPrefs.GetInt("level") == 1) {
@@ -86,7 +86,7 @@ IEnumerator LoadLevelRoutine()
     }
 
     void EndGame(EventInstance track) {
-        ServiceManager.Instance.GetService<FMODService>().OnBgmEnded -= EndGame;
+        FMODService.OnBgmEnded -= EndGame;
         Instantiate(_finishParticles);
         StartCoroutine(WaitForEndScreen());
     }
