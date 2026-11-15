@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 819285247194554121, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
+      propertyPath: ducksName
+      value: Nico
+      objectReference: {fileID: 0}
     - target: {fileID: 829835812854376902, guid: b4f7a6dd1c4c5450197aadc4bd82fa9b, type: 3}
       propertyPath: m_Color.b
       value: 0.525
