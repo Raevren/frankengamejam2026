@@ -7,29 +7,35 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StartGameScript : MonoBehaviour {
-    [SerializeField] SongAsset beginningMusic;
+    [SerializeField] SongAsset tutMusic;
+    [SerializeField] SongAsset levleOneMuisic;
 
     static readonly int open = Animator.StringToHash("open");
     static readonly int close = Animator.StringToHash("close");
 
     [SerializeField] Animator _curtain;
-    
+
     [SerializeField] ParticleSystem _finishParticles;
-    
+
 
     bool isStarted = false;
-    
+
     public void StartGame() {
         isStarted = true;
         _curtain.SetTrigger(open);
     }
 
-    public void LoadTutorial() 
-    {
-        StartCoroutine(LoadTutorialRoutine());
+    public void LoadTutorial() {
+        PlayerPrefs.SetInt("level", 0);
+        StartCoroutine(LoadLevelRoutine());
     }
 
-    IEnumerator LoadTutorialRoutine() 
+    public void LoadLevelOne() {
+        PlayerPrefs.SetInt("level", 1);
+        StartCoroutine(LoadLevelRoutine());
+    }
+
+IEnumerator LoadLevelRoutine() 
     {
         _curtain.SetTrigger(close);
         yield return null; 
@@ -66,8 +72,13 @@ public class StartGameScript : MonoBehaviour {
         var songServcie = ServiceManager.Instance.GetService<SongService>();
 
         songServcie.onStop += EndGame;
-        
-        songServcie.PlaySong(beginningMusic);
+
+
+        if (PlayerPrefs.GetInt("level") == 1) {
+            songServcie.PlaySong(tutMusic);
+        } else {
+            songServcie.PlaySong(levleOneMuisic);
+        }
         
     }
 

@@ -1700,8 +1700,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a5577079f8704d52af08b3305dbd022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartGameScript
-  beginningMusic: {fileID: 0}
+  tutMusic: {fileID: -717553813847926385, guid: f180d770c41014257b914f4d809b58fd, type: 3}
+  levleOneMuisic: {fileID: -717553813847926385, guid: c9d39c8fa48654ccd963402767fcecd6, type: 3}
   _curtain: {fileID: 1631477372}
+  _finishParticles: {fileID: 0}
 --- !u!114 &1631477374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2550,7 +2552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2278561666173537338, guid: 50ab9bc164b0c2c4db1ebbe79e679da3, type: 3}
       propertyPath: m_text
-      value: 2!
+      value: Song of Teiche!
       objectReference: {fileID: 0}
     - target: {fileID: 2947647006736341891, guid: 50ab9bc164b0c2c4db1ebbe79e679da3, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
@@ -2733,9 +2735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7185235318222594491, guid: 315413525cda456479c660883cae9326, type: 3}
       propertyPath: m_text
-      value: '1!
-
-'
+      value: Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 8299783944661554902, guid: 315413525cda456479c660883cae9326, type: 3}
       propertyPath: m_IsActive
