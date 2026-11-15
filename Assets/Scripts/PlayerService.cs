@@ -1,9 +1,7 @@
 using Audio;
 using Core;
 using FMOD.Studio;
-using FMODUnity;
 using UnityEngine;
-using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 sealed class PlayerService : IService {
     [SerializeField] internal bool isQuacking;
@@ -16,11 +14,13 @@ sealed class PlayerService : IService {
 
     [SerializeField] internal Ray quackRay;
 
+    bool isCorrect => true;
+    
     internal void StartQuack() {
         isQuacking = true;
         fmodService.PlayQuack(true, 70);
     }
-
+    
     internal void StopQuack() {
         isQuacking = false;
         fmodService.ReleaseQuackSound();

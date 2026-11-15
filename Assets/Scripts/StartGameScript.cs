@@ -1,10 +1,10 @@
 using Audio;
 using Core;
-using FMODUnity;
+using Level;
 using UnityEngine;
 
 public class StartGameScript : MonoBehaviour {
-    [SerializeField] EventReference beginningMusic;
+    [SerializeField] SongAsset beginningMusic;
 
     static readonly int open = Animator.StringToHash("open");
 

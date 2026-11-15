@@ -1,6 +1,8 @@
 using Core;
+using FMOD;
 using FMOD.Studio;
 using FMODUnity;
+using Debug = UnityEngine.Debug;
 using UnityEngine;
 using STOP_MODE = FMOD.Studio.STOP_MODE;
 
@@ -79,5 +81,16 @@ namespace Audio {
         public void OnAllRegistered() { }
 
         #endregion
+
+        public bool TryGetTime(out double time) {
+            if (!_musicEventInstance.HasValue) {
+                time = 0;
+                return false;
+            }
+
+            var result = _musicEventInstance.Value.getTimelinePosition(out int timeMilliseconds);
+            time = timeMilliseconds / 1000f;
+            return result == RESULT.OK;
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace Audio {
 
         void Start() {
             var service = ServiceManager.Instance.GetService<FMODService>();
-            service.PlayBGM(eventReference, leadMuted: leadMuted);
+            service.Play(eventReference, leadMuted: leadMuted);
         }
     }
 }
