@@ -1,15 +1,16 @@
 using Core;
 using FMODUnity;
+using Level;
 using UnityEngine;
 
 namespace Audio {
     public class BgmTrigger : MonoBehaviour {
-        [SerializeField] EventReference eventReference;
+        [SerializeField] SongAsset songAsset;
         [SerializeField] bool leadMuted;
 
         void Start() {
             var service = ServiceManager.Instance.GetService<FMODService>();
-            service.Play(eventReference, leadMuted: leadMuted);
+            service.PlayBGM(songAsset.audioEvent, leadMuted: leadMuted);
         }
     }
 }

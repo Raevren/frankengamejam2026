@@ -148,13 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35c0b3074deae4d5daf5b47b2e9bce7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BgmTrigger
-  eventReference:
-    Guid:
-      Data1: -17518469
-      Data2: 1182498063
-      Data3: 2032572047
-      Data4: 444900453
-    Path: event:/MUS_Practice
+  songAsset: {fileID: -717553813847926385, guid: f180d770c41014257b914f4d809b58fd, type: 3}
   leadMuted: 1
 --- !u!4 &29797377
 Transform:

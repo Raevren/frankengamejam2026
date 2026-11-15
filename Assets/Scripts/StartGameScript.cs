@@ -17,5 +17,5 @@ public class StartGameScript : MonoBehaviour {
         _curtain.SetTrigger(open);
     }
 
-    public void StartGameReally() => ServiceManager.Instance.GetService<FMODService>().PlayBGM(beginningMusic);
+    public void StartGameReally() => ServiceManager.Instance.GetService<FMODService>().PlayBGM(beginningMusic.audioEvent);
 }
