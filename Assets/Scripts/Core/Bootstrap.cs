@@ -5,6 +5,9 @@ namespace Core {
     public class Bootstrap : MonoBehaviour {
         static Bootstrap instance;
         ServiceManager _serviceManager;
+        
+        [SerializeField]
+        SongService songService;
 
         void Awake() {
             if (instance != null && instance != this) {
@@ -23,7 +26,7 @@ namespace Core {
             //Register all services
             _serviceManager.RegisterService<MusicService>();
             _serviceManager.RegisterService<PlayerService>();
-            _serviceManager.RegisterService<SongService>();
+            _serviceManager.RegisterService(songService);
             // All services should be registered by now
             _serviceManager.OnAllRegistered();
         }
