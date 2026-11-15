@@ -1,11 +1,15 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
 
-public class Duck : MonoBehaviour {
+public class Duck : MonoBehaviour, IPointerClickHandler {
         
     Animator animator;
+
+    [SerializeField] UnityEvent onClick;
 
     [SerializeField] SpriteRenderer duckTopActiveRenderer;
     [SerializeField] SpriteRenderer duckTopIdleRenderer;
@@ -61,6 +65,9 @@ public class Duck : MonoBehaviour {
     }
     
     #endregion
-    
-    
+
+
+    public void OnPointerClick(PointerEventData eventData) {
+        onClick?.Invoke();
+    }
 }

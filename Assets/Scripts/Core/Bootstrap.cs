@@ -8,6 +8,8 @@ namespace Core {
         
         [SerializeField]
         SongService songService;
+        [SerializeField] 
+        AudioConfig audioConfig;
 
         void Awake() {
             if (instance != null && instance != this) {
@@ -24,7 +26,7 @@ namespace Core {
 
         void RegisterServices() {
             //Register all services
-            _serviceManager.RegisterService<FMODService>();
+            _serviceManager.RegisterService(new FMODService(audioConfig));
             _serviceManager.RegisterService<PlayerService>();
             _serviceManager.RegisterService(songService);
             // All services should be registered by now

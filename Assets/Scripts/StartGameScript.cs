@@ -1,6 +1,5 @@
 using Audio;
 using Core;
-using FMODUnity;
 using Level;
 using UnityEngine;
 
@@ -18,5 +17,5 @@ public class StartGameScript : MonoBehaviour {
         _curtain.SetTrigger(open);
     }
 
-    public void StartGameReally() => ServiceManager.Instance.GetService<SongService>().PlaySong(beginningMusic);
+    public void StartGameReally() => ServiceManager.Instance.GetService<FMODService>().PlayBGM(beginningMusic.audioEvent);
 }

@@ -53,7 +53,7 @@ sealed class SongService : MonoBehaviour, IService {
         director.time = 0;
         director.Evaluate();
 
-        fmod.Play(song.audioEvent, true, true);
+        fmod.PlayBGM(song.audioEvent, true, true);
 
         onPlay?.Invoke();
     }

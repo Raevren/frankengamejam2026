@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{670e9824-2801-4fdb-9cc6-f4e06e912783}">
+		<property name="assetPath">
+			<value>Quaks/N_Quak_Fail.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.36195833333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{74cff4a5-2c82-49b3-91f8-d4dc2506e49e}</destination>
+		</relationship>
+	</object>
+</objects>

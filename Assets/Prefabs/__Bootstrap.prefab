@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.Bootstrap
   songService: {fileID: 4986955749187036097}
+  audioConfig: {fileID: 11400000, guid: 7271060f6783d8f4488f05b1d580220c, type: 2}
 --- !u!1 &918434400361040967
 GameObject:
   m_ObjectHideFlags: 0
