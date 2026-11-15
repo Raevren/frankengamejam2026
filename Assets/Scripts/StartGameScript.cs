@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using Audio;
 using Core;
+using FMOD.Studio;
 using Level;
+using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,6 +18,7 @@ public class StartGameScript : MonoBehaviour {
     [SerializeField] Animator _curtain;
 
     [SerializeField] ParticleSystem _finishParticles;
+    [SerializeField] EndOfGameScreen endGameScreen;
 
 
     bool isStarted = false;
@@ -71,7 +74,7 @@ IEnumerator LoadLevelRoutine()
     public void StartGameReally() {
         var songServcie = ServiceManager.Instance.GetService<SongService>();
 
-        songServcie.onStop += EndGame;
+        ServiceManager.Instance.GetService<FMODService>().OnBgmEnded += EndGame;
 
 
         if (PlayerPrefs.GetInt("level") == 1) {
@@ -82,7 +85,17 @@ IEnumerator LoadLevelRoutine()
         
     }
 
-    private void EndGame() {
+    void EndGame(EventInstance track) {
+        ServiceManager.Instance.GetService<FMODService>().OnBgmEnded -= EndGame;
         Instantiate(_finishParticles);
+        StartCoroutine(WaitForEndScreen());
+    }
+
+    IEnumerator WaitForEndScreen() {
+        yield return new WaitForSeconds(2f);
+        var endScreen = Instantiate(endGameScreen);
+        var scoreService = ServiceManager.Instance.GetService<ScoreService>();
+        int score = (scoreService.correctNotes - scoreService.wrongNotes) * 100;
+        endScreen.SetScore(score);
     }
 }

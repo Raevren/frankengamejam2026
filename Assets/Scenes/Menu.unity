@@ -1700,8 +1700,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a5577079f8704d52af08b3305dbd022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartGameScript
-  tutMusic: {fileID: -717553813847926385, guid: f180d770c41014257b914f4d809b58fd, type: 3}
-  levleOneMuisic: {fileID: -717553813847926385, guid: c9d39c8fa48654ccd963402767fcecd6, type: 3}
+  tutMusic: {fileID: 0}
+  levleOneMuisic: {fileID: 0}
   _curtain: {fileID: 1631477372}
   _finishParticles: {fileID: 0}
 --- !u!114 &1631477374

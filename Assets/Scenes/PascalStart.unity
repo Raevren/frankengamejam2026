@@ -799,6 +799,7 @@ MonoBehaviour:
   levleOneMuisic: {fileID: -717553813847926385, guid: c9d39c8fa48654ccd963402767fcecd6, type: 3}
   _curtain: {fileID: 1631477372}
   _finishParticles: {fileID: 8791686653430939153, guid: 4bb99615cd5d944b792e24ce9ca5755c, type: 3}
+  endGameScreen: {fileID: 1641074474191280984, guid: 562603662e842436abaa369defb0f5b8, type: 3}
 --- !u!1 &1941267486
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,13 +1,14 @@
+using System;
 using Core;
 using FMOD;
 using FMOD.Studio;
 using FMODUnity;
 using Debug = UnityEngine.Debug;
-using UnityEngine;
 using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 namespace Audio {
     public class FMODService : IService {
+        public event Action<EventInstance> OnBgmEnded;
         readonly AudioConfig _config;
         EventInstance? _musicEventInstance, _quackEventInstance;
 
@@ -26,6 +27,7 @@ namespace Audio {
             _musicEventInstance = RuntimeManager.CreateInstance(reference);
             ToggleBGMLeadMute(leadMuted);
             _musicEventInstance.Value.start();
+            _musicEventInstance.Value.setCallback(BgmEventCallback);
         }
 
         /// <summary>
@@ -39,6 +41,7 @@ namespace Audio {
 
             _musicEventInstance.Value.stop(immediate ? STOP_MODE.ALLOWFADEOUT : STOP_MODE.IMMEDIATE);
             _musicEventInstance.Value.release();
+            _musicEventInstance.Value.setCallback(null);
             _musicEventInstance = null;
         }
 
@@ -52,6 +55,15 @@ namespace Audio {
             }
 
             RuntimeManager.StudioSystem.setParameterByName(_config.paramLeadVolume, mute ? 0 : 1);
+        }
+
+        [AOT.MonoPInvokeCallback(typeof(EVENT_CALLBACK))]
+        RESULT BgmEventCallback(EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr) {
+            if (_musicEventInstance != null && type == EVENT_CALLBACK_TYPE.STOPPED) {
+                OnBgmEnded?.Invoke(_musicEventInstance.Value);
+                Debug.Log("[MusicService] End of BGM");
+            }
+            return RESULT.OK;
         }
 
         public void PlayQuack(bool isCorrect, int noteHeight) {
