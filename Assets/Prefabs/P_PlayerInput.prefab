@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuackDisplay
   quackPrefab: {fileID: 2876236008477611319, guid: f287d49aeb761974ba1279b375eb46a5, type: 3}
+  wrongNoteParticles: {fileID: 1365898305070365007, guid: c300b0678c208441f86bc709a87a77b2, type: 3}
+  niceNoteParticles: {fileID: 1365898305070365007, guid: df1d922aed6f5f840818ca523557acdc, type: 3}
 --- !u!1 &6821714221826676283
 GameObject:
   m_ObjectHideFlags: 0
