@@ -9,11 +9,10 @@ using UnityEngine;
 using UnityEngine.Timeline;
 
 namespace Editor {
-    [ScriptedImporter(4, "mid")]
+    [ScriptedImporter(5, "mid")]
     sealed class MidiImporter : ScriptedImporter {
         [SerializeField] int beatsPerMinute = 103;
-        [SerializeField]
-        public EventReference audioEvent;
+        [SerializeField] public EventReference audioEvent;
 
         public override void OnImportAsset(AssetImportContext ctx) {
             var asset = ScriptableObject.CreateInstance<SongAsset>();
@@ -51,6 +50,7 @@ namespace Editor {
                         clip.duration = note.duration * secondsPerTick;
                         if (clip.asset is TapPlayableAsset tap) {
                             tap.noteDuration = CalculateNoteDuration(note.duration, asset.ticksPerNote);
+                            tap.note = note;
                         }
 
                         ctx.AddObjectToAsset($"/timeline/{key}/{note.start}", clip.asset);

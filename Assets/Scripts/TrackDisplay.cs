@@ -19,6 +19,7 @@ sealed class TrackDisplay : MonoBehaviour {
                     clipTransform.anchoredPosition = new Vector2((float)start, 0);
                     if (clipTransform.TryGetComponent<NoteSprite>(out var sprite)) {
                         sprite.noteDuration = tap.noteDuration;
+                        sprite.note = tap.note;
                     } else {
                         clipTransform.sizeDelta = new Vector2((float)clip.duration, 1);
                     }
